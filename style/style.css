@@ -4,10 +4,28 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: black;
     color:white;
 }
+
+body::-webkit-scrollbar {
+    width: 20px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: black;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
 
 /*header*/
 header{
@@ -38,12 +56,12 @@ a:visited{
     color:white;
     text-decoration: none;
 }
-
+/********************/
 /*Contenedor de HOME*/
 .home{
     display:grid;
-    grid-template-columns: auto;
-    height: 520px;
+    grid-template-columns: auto auto;
+    height: 560px;
     width: 100%;
 }
 
@@ -60,6 +78,7 @@ img{
 
 /*Contenedor de Info*/
 h1{
+    color:#884EA0;
     font-size: 40px;
     text-align: center;
 }
@@ -70,3 +89,4 @@ h1{
     font-size: 15;
     margin-top: 10px;
 }
+/*****************************************/
