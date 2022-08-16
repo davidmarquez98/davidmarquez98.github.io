@@ -99,34 +99,37 @@ a:visited{
 /*Contenedor de Info*/
 .container_info{
     grid-area: info;
+    height: 100%;
 }
 
 .info{
     gap:20px;
     width: 90%;
     margin:0 auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 h1{ /*Title*/
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
 }
 .container_info .text{
     text-align: center;
     font-size: 15px;
-    margin-top: 30px;
 }
 
 /*Contenedor de Perfil*/
 .container_perfil{
     grid-area: profile;
     margin:0 auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 img{
-    width: 200px;
+    width: 250px;
+    border-radius: 30%;
 }
 /********************/
 /*Contenedor de EDUCATION*/
@@ -138,8 +141,16 @@ img{
 .education_experience{
     display: grid;
     grid-template-rows: 100%;
-    grid-template-areas: "school university course_one course_two course_english"; 
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-areas: "button_left school university course_one course_two course_english button_right"; 
     height: 100%;
+}
+
+.button_left{
+    grid-area: button_left;
+}
+.button_right{
+    grid-area: button_right;
 }
 
 .school{
