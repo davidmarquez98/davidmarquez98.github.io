@@ -27,15 +27,20 @@ body::-webkit-scrollbar {
     border: 3px solid black;  /* creates padding around scroll thumb */
   }
 
+  .contenedor_principal{
+    height: 5000px;
+  }
+
 /*header*/
 header{
-    height: 30%;  
+    position:sticky;
+    top:0px;
+    height: 2%;  
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .list_sub{
-    display:inline-block;
-    text-align: left;
     padding: 40px 60px;
 }
 
@@ -61,22 +66,18 @@ a:visited{
 .home{
     display:grid;
     grid-template-columns: auto auto;
-    height: 560px;
+    height: 10%;
     width: 100%;
 }
 
-/*Contenedor de Perfil*/
-.container_perfil{
-    display: flex;
-    justify-content: center;
-}
-
-img{
-    width: 250px;
-    padding-top: 50px;
-}
-
 /*Contenedor de Info*/
+.container_info{
+}
+
+.container_info .contenedor{
+    margin:50px;
+}
+
 h1{
     color:#884EA0;
     font-size: 40px;
@@ -90,3 +91,14 @@ h1{
     margin-top: 10px;
 }
 /*****************************************/
+/*Contenedor de Perfil*/
+.container_perfil{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 200px;
+}
+
