@@ -11,40 +11,62 @@ html{
 body{
     background-color: black;
     color:white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 600px 600px 600px 200px;
+    grid-template-areas: "header" "home" "education" "projects" "footer";
+}
+.home{
+    color:#884EA0;;
 }
 
+.education{
+    color:#3498DB;
+}
+
+.projects{
+    color:#58D68D 
+}
+
+.contact_me{
+    color:#F7DC6F 
+}
+
+.networks{
+    color:#E74C3C; 
+}
+
+h2{
+    margin: 30px;
+}
 body::-webkit-scrollbar {
-    width: 20px;               /* width of the entire scrollbar */
+    width: 15px;               
   }
   
   body::-webkit-scrollbar-track {
-    background: black;        /* color of the tracking area */
+    background: black;        
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: white;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid black;  /* creates padding around scroll thumb */
+    background-color: white;    
+    border-radius: 20px;      
+    border: 3px solid black;  
   }
-
-  .contenedor_principal{
-    height: 5000px;
-  }
-
-/*header*/
+/********************/
+/*Contenedor de HEADER*/
+/********************/
 header{
     position:sticky;
     top:0px;
-    height: 2%;  
-    width: 100%;
+    grid-area: header;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.list_sub{
+.list{
     padding: 40px 60px;
 }
 
-.list_sub li{
+.list li{
     display:inline-block;
     font-size: 15px;
     margin:0px 20px 0px;
@@ -58,47 +80,61 @@ a:hover{
 }
 
 a:visited{
-    color:white;
     text-decoration: none;
 }
 /********************/
 /*Contenedor de HOME*/
-.home{
+/********************/
+.section_home{
     display:grid;
-    grid-template-columns: auto auto;
-    height: 10%;
-    width: 100%;
+    grid-template-columns: 70% auto;
+    grid-area: "info" "profile";
 }
 
 /*Contenedor de Info*/
 .container_info{
+    grid-template-areas: info;
 }
 
-.container_info .contenedor{
+.container_info .info{
     margin:50px;
 }
 
-h1{
-    color:#884EA0;
+h1{ /*Title*/
     font-size: 40px;
     text-align: center;
 }
-.container_info p{
+.container_info .text{
     text-align: center;
     width: 80%;
     margin:auto;
     font-size: 15;
-    margin-top: 10px;
 }
-/*****************************************/
+
 /*Contenedor de Perfil*/
 .container_perfil{
-    width: 60%;
-    display: flex;
-    justify-content: center;
+    grid-template-areas: profile;
 }
 
 img{
     width: 200px;
 }
+/********************/
+/*Contenedor de EDUCATION*/
+/********************/
+.formacion_academica{
+    grid-area: education;
+}
 
+/********************/
+/*Contenedor de PROJECTS*/
+/********************/
+.projectos{
+    grid-area: projects;
+}
+
+/********************/
+/*Contenedor de FOOTER*/
+.footer{
+    grid-area: footer;
+}
