@@ -136,12 +136,14 @@ h1{ /*Title*/
     width: 250px;
     border-radius: 30%;
 }
-/********************/
+/**************************/
 /*Contenedor de EDUCATION*/
-/********************/
+/************************/
+/* Titulo */
 .formacion_academica{
     grid-area: education;
 }
+
 
 .container_slider{
     width: auto;
@@ -159,35 +161,47 @@ h1{ /*Title*/
     width: 1500px;
     gap:10px;
 }
-
+/*Cada elemento de la lista*/
 .slider ul li{
     list-style: none;
 }
-
-.slider ul .li_education{
+/*Cada elemento de educacion de la lista*/
+.li_education{
     width: 250px;
     height: 300px;
     border: 1px solid white;
 }
 
+.li_education p{
+    width: auto;
+}
+
 .education{
     position: relative;
+    height: 182px;
 }
 
 .education img{
     width: 100%;
 }
 
-.education:hover{
-    opacity: 0.5;
-    width: 105%;
+.education:hover .text_education,img{
+    display: block;
+    transition: 0.8s;
 }
 
-.education p{
-    font-size: 15px;
+.text_education{
     position:absolute;
     top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    height: 100%;
 }
+
 
 /********************/
 /*Contenedor de PROJECTS*/
