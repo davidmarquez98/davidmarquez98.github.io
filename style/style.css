@@ -16,23 +16,28 @@ body{
     grid-template-rows: 100px 600px 600px 600px 200px;
     grid-template-areas: "header" "home" "education" "projects" "footer";
 }
-.home{
-    color:#884EA0;;
+
+p{
+    text-align: center;
 }
 
-.education{
+.title_home{
+    color:#884EA0;
+}
+
+.title_education{
     color:#3498DB;
 }
 
-.projects{
+.title_projects{
     color:#58D68D 
 }
 
-.contact_me{
+.title_contact_me{
     color:#F7DC6F 
 }
 
-.networks{
+.title_networks{
     color:#E74C3C; 
 }
 
@@ -109,6 +114,7 @@ a:visited{
 }
 
 h1{ /*Title*/
+    color:#884EA0;
     font-size: 50px;
     text-align: center;
     margin-top: -10px;
@@ -126,7 +132,7 @@ h1{ /*Title*/
     margin-top: 150px;
 }
 
-img{
+.perfil img{
     width: 250px;
     border-radius: 30%;
 }
@@ -144,7 +150,6 @@ img{
 }
 
 .slider{
-    height: 100%;
     max-width: 840px;
     overflow:hidden;
 }
@@ -165,7 +170,23 @@ img{
     border: 1px solid white;
 }
 
-.slider ul .linea i{
+.education{
+    position: relative;
+}
+
+.education img{
+    width: 100%;
+}
+
+.education:hover{
+    opacity: 0.5;
+    width: 105%;
+}
+
+.education p{
+    font-size: 15px;
+    position:absolute;
+    top:0;
 }
 
 /********************/
