@@ -38,7 +38,7 @@ body{
 
 .title{
     padding: 30px;
-    height: 30px;
+    height: 10%;
 }
 
 body::-webkit-scrollbar {
@@ -62,7 +62,6 @@ header{
     top:0px;
     grid-area: header;
     background-color: rgba(0, 0, 0, 0.9);
-    top: 0;
     transition: top 0.5s;
 }
 
@@ -138,39 +137,35 @@ img{
     grid-area: education;
 }
 
-.education_experience{
-    display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-areas: "button_left school university course_one course_two course_english button_right"; 
+.container_slider{
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.slider{
     height: 100%;
+    max-width: 840px;
+    overflow:hidden;
 }
 
-.button_left{
-    grid-area: button_left;
-}
-.button_right{
-    grid-area: button_right;
-}
-
-.school{
-    grid-area: school;
+.slider ul{
+    display: flex;
+    width: 1500px;
+    gap:10px;
 }
 
-.university{
-    grid-area: university;
+.slider ul li{
+    list-style: none;
 }
 
-.course_one{
-    grid-area: course_one;
+.slider ul .li_education{
+    width: 250px;
+    height: 300px;
+    border: 1px solid white;
 }
 
-.course_two{
-    grid-area: course_two;
-}
-
-.couse_english{
-    grid-area: course_english;
+.slider ul .linea i{
 }
 
 /********************/
