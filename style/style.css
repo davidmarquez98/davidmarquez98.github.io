@@ -9,12 +9,17 @@ html{
 }
 
 body{
-    background-color: black;
+    background-color: #0C0C0C  ;
     color:white;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px 600px 600px 600px 200px;
+    grid-template-rows: 100px 650px 650px 650px 200px;
     grid-template-areas: "header" "home" "education" "projects" "footer";
+    z-index: -1;
+}
+
+footer{
+    background-color: #0A0A0A;
 }
 
 p{
@@ -51,7 +56,7 @@ body::-webkit-scrollbar {
   }
   
   body::-webkit-scrollbar-track {
-    background: black;        
+    background: #0C0C0C  ;        
   }
   
   body::-webkit-scrollbar-thumb {
@@ -66,18 +71,19 @@ header{
     position:sticky;
     top:0px;
     grid-area: header;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(12, 12, 12 , 0.9);
     transition: top 0.5s;
+    z-index: 1;
 }
 
-.list{
-    padding: 40px 60px;
+.list_themes{
+
 }
 
-.list li{
+.list_themes li{
     display:inline-block;
     font-size: 15px;
-    margin:0px 20px 0px;
+    margin:0px 20px;
 }
 a{
     text-decoration: none;
@@ -90,6 +96,23 @@ a:hover{
 a:visited{
     text-decoration: none;
 }
+
+.list_themes ul li{
+}
+
+.sub_menu{
+    position: absolute;
+    margin-top: 30px;
+}
+
+.sub_menu li{
+    margin: 10px;
+}
+
+.sub_menu li i{
+    font-size: 25px;
+}
+
 /********************/
 /*Contenedor de HOME*/
 /********************/
@@ -149,6 +172,7 @@ h1{ /*Title*/
     width: auto;
     height: auto;
     display: flex;
+    margin: 0px 150px;
 }
 
 .slider{
@@ -169,7 +193,6 @@ h1{ /*Title*/
 .li_education{
     width: 250px;
     height: 300px;
-    border: 1px solid white;
 }
 
 .li_education p{
@@ -183,6 +206,7 @@ h1{ /*Title*/
 
 .education img{
     width: 100%;
+    border-radius: 5px;
 }
 
 .education:hover img{
@@ -203,7 +227,37 @@ h1{ /*Title*/
     height: 100%;
 }
 
+.container_tools{
+    margin: 10px;
+    border-radius:5px;
+    height: 150px;
+}
 
+.container_tools ul{
+    background-color: black;
+    border-radius: 5px;;
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    height: 50px;
+}
+
+.container_tools img{
+    width: 40px;
+    margin: 0px 30px;
+}
+
+.container_tools img:hover{
+    width: 50px;
+    transition: 0.8s;
+}
+
+.title_tools{
+    padding: 10px;
+}
+.list_tools{
+    margin: 20px;
+}
 /********************/
 /*Contenedor de PROJECTS*/
 /********************/

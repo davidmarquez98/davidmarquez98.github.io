@@ -15,13 +15,22 @@
 
 <body>
   <header id="id_header">
-    <div class="list">
+    <div class="list_themes">
       <ul>
-        <li><a class="title_home" href="#id_home">Home</a></li>
+        <li>
+          <div class="home">
+            <a class="title_home" href="#id_home">Home</a>
+          </div>
+        </li>
         <li><a class="title_education" href="#id_formacion_academica">Formacion Academica</a></li>
         <li><a class="title_projects" href="#id_projectos">Projectos</a></li>
         <li><a class="title_contact_me">Contactame</a></li>
-        <li><a class="title_networks">Redes</a></li>
+        <li><span class="title_networks">Redes</span>
+          <ul class="sub_menu">
+            <li><i class="fa-brands fa-linkedin"></i></li>
+            <li><i class="fa-brands fa-square-github"></i></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </header>
@@ -52,50 +61,13 @@
     <div class="container_slider">
       <div class="button_left"><i class="fa-solid fa-circle-arrow-left"></i></div>
       <div class="slider">
-        <ul> 
-          <li class="li_education"><!-- Escuela --> 
+        <ul>
+          <li class="li_education">
+            <!-- Escuela -->
             <div class="education">
-              <img src="img/school.png"/>
-                <h3>Economia y Administracion</h3>
-            </div>
-            <p>Economia y Administracion</p>
-          </li>
-
-          <li class="linea">
-            <i class="fa-solid fa-code-commit"></i>
-          </li>
-
-          <li class="li_education"><!-- Universidad --> 
-            <div class="education">
-              <img src="img/university.jpg"/>
-              <p>Uso básico de JavaScript, aprendizaje del lenguaje C (Variables, funciones,
-                arrays, punteros, archivos)
-                </p>
-            </div>
-            <p>Tecnicatura en Programacion</p>
-          </li>
-
-          <li class="linea"><!--Udemy-->
-            <i class="fa-solid fa-code-commit"></i>
-          </li>
-
-          <li class="li_education"><!-- Curso --> 
-            <div class="education">
-              <img src="img/udemy.png"/>
-              <p>Fundamentos, POO, Patrones de Diseño y buenas
-                prácticas, JDBC, Servlets y JSP's, Java EE, HTML,
-                CSS, JavaScript, Struts 2, Hibernate, Spring, Angular.</p>
-              ECEA | Secundaria 2010 - 2015
-            </div>
-          </li>
-
-          <li class="linea">
-            <i class="fa-solid fa-code-commit"></i>
-          </li>
-
-          <li class="li_education"><!-- Curso --> 
-            <div class="education">
-              <img src="img/udemy.png"/>             
+              <img src="img/school.png" />
+              <p>Economia y Administracion</p>
+              Escuela Cristiana Evangelica Argentina | 2010 - 2015
             </div>
           </li>
 
@@ -104,25 +76,97 @@
           </li>
 
           <li class="li_education">
-            <div class="education"><!--Ingles-->
-              <img src="img/udemy.png"/>             
+            <!-- Universidad -->
+            <div class="education">
+              <img src="img/university.jpg" />
+              <p>Tecnicatura en Programacion <br />Uso básico de JavaScript, aprendizaje del lenguaje C (Variables,
+                funciones,
+                arrays, punteros, archivos)
+              </p>
+            </div>
+            UTN - Facultad Regional de Avellaneda
+          </li>
+
+          <li class="linea">
+            <!--Udemy-->
+            <i class="fa-solid fa-code-commit"></i>
+          </li>
+
+          <li class="li_education">
+            <!-- Curso -->
+            <div class="education">
+              <img src="img/udemy.png" />
+              <p>Fundamentos, POO, Patrones de Diseño y buenas
+                prácticas, JDBC, Servlets y JSP's, Java EE, HTML,
+                CSS, JavaScript, Struts 2, Hibernate, Spring, Angular.</p>
+              Universidad Java 2021 por Global Mentoring Ing.
+              Ubaldo Acosta
+            </div>
+          </li>
+
+          <li class="linea">
+            <i class="fa-solid fa-code-commit"></i>
+          </li>
+
+          <li class="li_education">
+            <!-- Curso -->
+            <div class="education">
+              <img src="img/udemy.png" />
+            </div>
+          </li>
+
+          <li class="linea">
+            <i class="fa-solid fa-code-commit"></i>
+          </li>
+
+          <li class="li_education">
+            <div class="education">
+              <!--Ingles-->
+              <img src="img/udemy.png" />
             </div>
           </li>
         </ul>
       </div>
       <div class="button_right"><i class="fa-solid fa-circle-arrow-right"></i></div>
     </div>
+    <div class="container_tools">
+      <!--Contenedor herramientas-->
+      <h2 class="title_tools">Habilidades</h2>
+      <div class="list_tools">
+        <ul>
+          <li><img src="img/java.logo.png"></li>
+          <li><img src="img/html-logo.png"></li>
+          <li><img src="img/css3-logo.png"></li>
+          <li><img src="img/javascript-logo.png"></li>
+          <li><img src="img/typescript-logo.png"></li>
+          <li><img src="img/mysql-logo.png"></li>
+          <li><img src="img/angular-logo.png"></li>
+          <li><img src="img/spring-logo.png"></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="proyectos" id="id_projectos">
     <div>
       <div class="title">
-        <h2 class="projects">
-          Projectos</h2>
+        <h2 class="title_projects">
+          Projectos
+        </h2>
       </div>
       <div class="container_projectos">
-        <div>Portafolio</div>
-        <div>COMMING SOON</div>
+        <div class="button_left"><i class="fa-solid fa-circle-arrow-left"></i></div>
+        <div class="slider">
+          <ul>
+            <li>
+              <div class="portfolio">Portafolio</div>
+            </li>
+            <li>
+              <div class="comming_soon">COMMING SOON</div>
+            </li>
+          </ul>
+          <div class="button_left"><i class="fa-solid fa-circle-arrow-left"></i></div>
+        </div>
       </div>
     </div>
   </section>
