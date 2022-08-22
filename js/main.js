@@ -4,7 +4,7 @@ window.onscroll = function(){
     if(principalUbication >= actualDisplacement){
         document.getElementById("id_header").style.top = '0';
     }else{
-        document.getElementById("id_header").style.top = '-100px';
+        document.getElementById("id_header").style.top = '-80px';      
     }
     principalUbication = actualDisplacement;
 }

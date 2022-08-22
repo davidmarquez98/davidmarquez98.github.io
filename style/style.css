@@ -18,12 +18,16 @@ body{
     z-index: -1;
 }
 
-footer{
-    background-color: #0A0A0A;
-}
-
 p{
     text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 .title_home{
@@ -50,13 +54,13 @@ p{
     padding: 30px;
     height: 10%;
 }
-
+/*Scroll*/
 body::-webkit-scrollbar {
     width: 15px;               
   }
   
   body::-webkit-scrollbar-track {
-    background: #0C0C0C  ;        
+    background: #0C0C0C;        
   }
   
   body::-webkit-scrollbar-thumb {
@@ -65,36 +69,38 @@ body::-webkit-scrollbar {
     border: 3px solid black;  
   }
 /********************/
-/*Contenedor de HEADER*/
+/*Container of HEADER*/
 /********************/
 header{
-    position:sticky;
-    top:0px;
     grid-area: header;
+    position:sticky;
     background-color: rgb(12, 12, 12 , 0.9);
     transition: top 0.5s;
     z-index: 1;
 }
 
+/*TITLES*/
 .list_themes{
     height: 100%;
+    width: 80%;
 }
 
 .list_themes ul{
     height: 100%;
 }
-
-.list_themes ul li{
+.home, .education, .projects, .contact_me, .networks{
     display:inline-block;
     font-size: 15px;
     height: 100%;
-    width: 180px;
+    width: 18%;
 }
 
-.list_themes ul li a,span{
+.container_title{
     display: grid;
     place-items: center;
+    height: 100%;
 }
+
 .home:hover{
     background-color:#C39BD3;
 }
@@ -103,7 +109,7 @@ header{
     background-color:#7FB3D5; 
 }
 
-.education:hover a{
+.education:hover span{
     color:#154360 ; 
 }
 
@@ -111,7 +117,7 @@ header{
     background-color: #A9DFBF;
 }
 
-.projects:hover a{
+.projects:hover span{
     color:#0B5345; 
 }
 
@@ -119,7 +125,7 @@ header{
     background-color: #F9E79F;
 }
 
-.contact_me:hover a{
+.contact_me:hover span{
     color: #9A7D0A;
 }
 
@@ -131,32 +137,39 @@ header{
     color: #641E16;
 }
 
-a{
-    text-decoration: none;
-}
-
-a:hover{
-    text-decoration: underline;
-}
-
-a:visited{
-    text-decoration: none;
-}
-
-.sub_menu{
+/*SUB MENU NETWORKS*/
+.container_sub_menu{
+    display: none;
     position: absolute;
+    margin-left: 65px;
+    height: 100px;
+    width: 150px;
 }
 
-.sub_menu li{
-    margin: 10px;
+.sub_menu li {
+    margin:15px 10px 0 20px;
 }
 
 .sub_menu li i{
     font-size: 25px;
 }
+.sub_menu a:hover{
+    text-decoration: underline;
+}
+
+.sub_menu li a:visited{
+    color:white;
+}
+
+.networks:hover .container_sub_menu{
+    display: block;
+    background-color: rgb(100, 30, 22 , 0.9);
+    color:#F5B7B1;
+}
+
 
 /********************/
-/*Contenedor de HOME*/
+/*Section of HOME*/
 /********************/
 .section_home{
     display:grid;
@@ -209,7 +222,6 @@ h1{ /*Title*/
     grid-area: education;
 }
 
-
 .container_slider{
     width: auto;
     height: auto;
@@ -228,9 +240,7 @@ h1{ /*Title*/
     gap:10px;
 }
 /*Cada elemento de la lista*/
-.slider ul li{
-    list-style: none;
-}
+
 /*Cada elemento de educacion de la lista*/
 .li_education{
     width: 250px;
@@ -276,7 +286,7 @@ h1{ /*Title*/
 }
 
 .container_tools ul{
-    background-color: black;
+    background-color: #0A0A0A;
     border-radius: 5px;;
     display: flex;
     list-style: none;
@@ -309,6 +319,7 @@ h1{ /*Title*/
 
 /********************/
 /*Contenedor de FOOTER*/
-.footer{
+footer{
     grid-area: footer;
+    background-color: #0A0A0A;
 }
