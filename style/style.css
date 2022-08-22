@@ -13,7 +13,7 @@ body{
     color:white;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px 650px 650px 650px 200px;
+    grid-template-rows: 80px 650px 650px 650px 200px;
     grid-template-areas: "header" "home" "education" "projects" "footer";
     z-index: -1;
 }
@@ -77,14 +77,60 @@ header{
 }
 
 .list_themes{
-
+    height: 100%;
 }
 
-.list_themes li{
+.list_themes ul{
+    height: 100%;
+}
+
+.list_themes ul li{
     display:inline-block;
     font-size: 15px;
-    margin:0px 20px;
+    height: 100%;
+    width: 180px;
 }
+
+.list_themes ul li a,span{
+    display: grid;
+    place-items: center;
+}
+.home:hover{
+    background-color:#C39BD3;
+}
+
+.education:hover{
+    background-color:#7FB3D5; 
+}
+
+.education:hover a{
+    color:#154360 ; 
+}
+
+.projects:hover{
+    background-color: #A9DFBF;
+}
+
+.projects:hover a{
+    color:#0B5345; 
+}
+
+.contact_me:hover{
+    background-color: #F9E79F;
+}
+
+.contact_me:hover a{
+    color: #9A7D0A;
+}
+
+.networks:hover{
+    background-color: #F1948A;
+}
+
+.networks:hover span{
+    color: #641E16;
+}
+
 a{
     text-decoration: none;
 }
@@ -97,12 +143,8 @@ a:visited{
     text-decoration: none;
 }
 
-.list_themes ul li{
-}
-
 .sub_menu{
     position: absolute;
-    margin-top: 30px;
 }
 
 .sub_menu li{
@@ -199,24 +241,24 @@ h1{ /*Title*/
     width: auto;
 }
 
-.education{
+.education_card{
     position: relative;
     height: 182px;
 }
 
-.education img{
+.education_card img{
     width: 100%;
     border-radius: 5px;
 }
 
-.education:hover img{
+.education_card:hover img{
     opacity: 0.2;
     transition: 0.5s;
 }
-.education:hover p{
+.education_card:hover p{
     display: block;
 }
-.education p{
+.education_card p{
     position:absolute;
     top:40%;
     left:0;

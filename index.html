@@ -6,6 +6,7 @@
   <title>My Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/logo.jpg">
   <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,19 +18,31 @@
   <header id="id_header">
     <div class="list_themes">
       <ul>
-        <li>
-          <div class="home">
+        <li class="home">
             <a class="title_home" href="#id_home">Home</a>
+        </li>
+        <li class="education">
+          <div>
+            <a class="title_education" href="#id_formacion_academica">Formacion Academica</a>
           </div>
         </li>
-        <li><a class="title_education" href="#id_formacion_academica">Formacion Academica</a></li>
-        <li><a class="title_projects" href="#id_projectos">Projectos</a></li>
-        <li><a class="title_contact_me">Contactame</a></li>
-        <li><span class="title_networks">Redes</span>
-          <ul class="sub_menu">
-            <li><i class="fa-brands fa-linkedin"></i></li>
-            <li><i class="fa-brands fa-square-github"></i></li>
-          </ul>
+        <li class="projects">
+          <div>
+            <a class="title_projects" href="#id_projectos">Projectos</a>
+          </div>
+        </li>
+        <li class="contact_me">
+          <div></div>
+            <a class="title_contact_me">Contactame</a>
+        </li>
+        <li class="networks">
+          <div>
+            <span class="title_networks">Redes</span>
+            <ul class="sub_menu">
+              <li><i class="fa-brands fa-linkedin"></i></li>
+              <li><i class="fa-brands fa-square-github"></i></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
@@ -38,7 +51,7 @@
   <section class="section_home" id="id_home">
     <div class="container_info">
       <div class="info">
-        <h1 class="home">¡Hola, soy David, Bienvenidos a mi portafolio! 💼</h1>
+        <h1>¡Hola, soy David, Bienvenidos a mi portafolio! 💼</h1>
         <p class="text">
           Soy un desarrollador en programacion, tengo 24 años y vivo en Argentina, Buenos Aires.
           Te invito a pasarte a ver mi informacion, mis proyectos, ver mis redes y ademas,
@@ -64,7 +77,7 @@
         <ul>
           <li class="li_education">
             <!-- Escuela -->
-            <div class="education">
+            <div class="education_card">
               <img src="img/school.png" />
               <p>Economia y Administracion</p>
               Escuela Cristiana Evangelica Argentina | 2010 - 2015
@@ -77,7 +90,7 @@
 
           <li class="li_education">
             <!-- Universidad -->
-            <div class="education">
+            <div class="education_card">
               <img src="img/university.jpg" />
               <p>Tecnicatura en Programacion <br />Uso básico de JavaScript, aprendizaje del lenguaje C (Variables,
                 funciones,
@@ -94,7 +107,7 @@
 
           <li class="li_education">
             <!-- Curso -->
-            <div class="education">
+            <div class="education_card">
               <img src="img/udemy.png" />
               <p>Fundamentos, POO, Patrones de Diseño y buenas
                 prácticas, JDBC, Servlets y JSP's, Java EE, HTML,
