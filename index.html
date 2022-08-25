@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 </head>
 
 <body>
@@ -86,16 +88,17 @@
       <h2 class="title_education">Formacion Academica</h2>
     </div>
 
-    <div class="slider">
-      <div class="container_slider">
-        <button class="button_left"><i class="fa-solid fa-circle-arrow-left"></i></button>
-        <div class="slider_list">
-          <div class="card">
+    <div class="slider-container swiper">
+      <div class="slider-content">
+        <div class="card-wrapper swiper-wrapper">
+
+          <div class="card swiper-slide">
             <div class="card-container">
               <div class="card-image">
                 <img src="img/school.png" />
                 <div class="card-text">
-                  <p>Economia y Administracion</p>
+                  <span>Economia y Administracion</span>
+                  <p>asdkjadjhsadj hdsaj dhndfg dfggg gd sd sdd s dsd a da sdasd a das d sadgggg gs</p>
                 </div>
               </div>
               <div class="card-content">
@@ -103,9 +106,50 @@
               </div>
             </div>
           </div>
+
+          <div class="card swiper-slide">
+            <div class="card-container">
+              <div class="card-image">
+                <img src="img/university.jpg" />
+                <div class="card-text">
+                  <span>Tecnicatura en Programacion</span>
+                  <p>Uso básico de JavaScript, aprendizaje del lenguaje C (Variables, funciones,
+                    arrays, punteros, archivos)
+                  </p>
+                </div>
+              </div>
+              <p>UTN - Facultad Regional de Avellaneda | Abril 2021 - Incompleto 1er Cuatrimestre</p>
+            </div>
+          </div>
+
+          <div class="card swiper-slide">
+            <div class="card-container">
+              <div class="card-image">
+                <img src="img/udemy.png" />
+                <div class="card-text">
+                  <span> Universidad Java 2021 por Global Mentoring Ing.Ubaldo Acosta</span>
+                  <p>Fundamentos, POO, Patrones de Diseño y buenas
+                    prácticas, JDBC, Servlets y JSP's, Java EE, HTML,
+                    CSS, JavaScript, Struts 2, Hibernate, Spring, Angular.</p>
+                </div>
+              </div>
+              <p>Udemy | Enero 2022 - Agosto 2022</p>
+            </div>
+          </div>
+
+          <div class="card swiper-slide">
+            <div class="card-container">
+              <div class="card-image">
+                <!--Ingles-->
+                <img src="img/udemy.png" />
+                <div class="card-text">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        
-        <button class="button_right"><i class="fa-solid fa-circle-arrow-right"></i></button>
       </div>
     </div>
 
@@ -156,6 +200,7 @@
     Footer
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/00b2c971fa.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
