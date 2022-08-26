@@ -8,3 +8,13 @@ window.onscroll = function(){
     }
     principalUbication = actualDisplacement;
 }
+
+var swiper = new Swiper(".slider-content", {
+    slidesPerView: 3,
+    spaceBetween: 1,
+    slidesPerGroup: 3,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

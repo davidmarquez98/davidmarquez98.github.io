@@ -35,7 +35,7 @@ a{
 }
 
 .title_education{
-    color:#7FB3D5;
+    color:#3498DB;
 }
 
 .title_projects{
@@ -222,7 +222,6 @@ h1{ /*Title*/
 
 .slider-container{
     max-width:1120px;
-    width: 100%;
 }
 
 .card{
@@ -268,8 +267,7 @@ h1{ /*Title*/
 
 .card-content{
     width: 100%;
-    height: auto;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .card:hover .card-text{
@@ -277,6 +275,9 @@ h1{ /*Title*/
     transition: 0.8s;
 }
 
+.swiper-button-next{
+    color: white;
+}
 /*Container TOOLS*/
 .container_tools{
     margin: 10px;
@@ -305,6 +306,7 @@ h1{ /*Title*/
 
 .title_tools{
     padding: 10px;
+    color:#3498DB;
 }
 .list_tools{
     margin: 20px;
