@@ -180,16 +180,14 @@ header{
 }
 
 /*Contenedor de Info*/
-.container_info{
+.info-container{
     grid-area: info;
     height: 100%;
 }
 
-.info{
-    gap:20px;
+.info-content{
     width: 90%;
-    margin:0 auto;
-    margin-top: 150px;
+    margin:150px auto;
 }
 
 h1{ /*Title*/
@@ -199,22 +197,33 @@ h1{ /*Title*/
     margin-top: -10px;
     margin-bottom: 30px;
 }
-.container_info .text{
+.info-text{
     text-align: center;
     font-size: 18px;
+    font-weight: bolder;
 }
 
 /*Contenedor de Perfil*/
-.container_perfil{
+.profile-container{
+    width: auto;
     grid-area: profile;
-    margin:0 auto;
-    margin-top: 150px;
 }
 
-.perfil img{
+.profile{
+    display: grid;
+    place-items: center;
+    margin-top: 80px ;
+    gap: 10px;
+}
+.profile img{
     width: 250px;
     border-radius: 30%;
     border: 10px solid #884EA0;
+}
+
+.profile-profesion{
+    font-size: 30px;
+    font-weight: bolder;
 }
 /**************************/
 /*Contenedor de EDUCATION*/
@@ -284,7 +293,7 @@ h1{ /*Title*/
 
 .container_tools ul{
     background-color: black;
-    border-radius: 5px;;
+    border-radius: 5px;
     display: flex;
     list-style: none;
     padding: 10px;
@@ -315,12 +324,46 @@ h1{ /*Title*/
     grid-area: projects;
 }
 
-.project-card img{
+.project-card{
+    display: inline-block;
+}
+
+.project-card-container{
+    height: 400px;
+    width: 550px;
+    border: 1px solid #58D68D;
+    border-radius: 5px;
+    margin: 30px 30px;
+    background-color: black;
+    transition: all 400ms ease;
+}
+
+.project-card-container:hover{
+    box-shadow: 5px 5px 20px rgb(88, 214, 141,0.4);
+    transform: translateY(-3%);
+}
+
+.project-card-content{
+    margin: 20px;
+}
+
+.project-card-image img{
     width: 500px;
-    border: solid ;
     border-radius: 5px;
 }
 
+.project-card-text{
+    width: 500px;
+    height: 225px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+.project-card-buttons{
+    font-size: 35px;
+}
 /********************/
 /*Contenedor de FOOTER*/
 footer{

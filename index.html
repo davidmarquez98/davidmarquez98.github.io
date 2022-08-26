@@ -10,9 +10,8 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -65,10 +64,10 @@
   </header>
 
   <section class="section_home" id="id_home">
-    <div class="container_info">
-      <div class="info">
+    <div class="info-container">
+      <div class="info-content">
         <h1>¡Hola, soy David, Bienvenidos a mi portafolio! 💼</h1>
-        <p class="text">
+        <p class="info-text">
           Soy un desarrollador en programacion, tengo 24 años y vivo en Argentina, Buenos Aires.
           Te invito a pasarte a ver mi informacion, mis proyectos, ver mis redes y ademas,
           mandarme un mail para recomendaciones, consejos o solo contactarte conmigo.<br />
@@ -76,9 +75,10 @@
         </p>
       </div>
     </div>
-    <div class="container_perfil">
-      <div class="perfil">
+    <div class="profile-container">
+      <div class="profile">
         <img src="img/perfil.jpg" />
+        <div class="profile-profesion">Developer Full Stack</div>
       </div>
     </div>
   </section>
@@ -152,6 +152,19 @@
               </div>
             </div>
           </div>
+
+          <div class="card swiper-slide">
+            <div class="card-container">
+              <div class="card-image">
+                <!--Ingles-->
+                <img src="img/udemy.png" />
+                <div class="card-text">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="swiper-button-prev"></div>
@@ -181,24 +194,57 @@
   </section>
 
   <section class="proyectos" id="id_projectos">
-      <div class="title">
-        <h2 class="title_projects">
-          Projectos
-        </h2>
+    <div class="title">
+      <h2 class="title_projects">
+        Projectos
+      </h2>
+    </div>
+    <div class="project-cards">
+      <div class="project-card">
+        <div class="project-card-container">
+          <div class="project-card-content">
+            <div class="project-card-image">
+              <img src="img/portfolio.png"></img>
+            </div>
+          </div>
+          <div class="project-card-content">
+            <span>My portfolio</span>
+            <p>
+              This is my first app where I show some of my educational information and
+              all my projects that I did meanwhile the time.
+            </p>
+          </div>
+          <div class="project-card-buttons">
+            <a target="" href="https://github.com/davidmarquez98/portfolio"><i class="fa-brands fa-square-github"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="project-cards">
-              <div class="project-card">
-                <img src="img/portfolio.png"></img>
-                My portfolio
-              </div>
-              <div class=" project-card">
-                  COMMING SOON..
-              </div>
+
+      <div class="project-card">
+        <div class="project-card-container">
+          <div class="project-card-text">
+            <div class="comming-soon">COMMING SOON</div>
+          </div>
+          <div class="project-card-content">
+            <p>💻 Working.. Nowadays, I am studying. Also, at the same time, I am doing PROJECTS
+              about my carrer. You can go to my GITHUB to have a look of my codes!
+            </p>
+          </div>
+          <div class="project-card-buttons">
+            <a target="_blank" href="https://github.com/davidmarquez98/portfolio"><i
+                class="fa-brands fa-square-github"></i></a>
+          </div>
+        </div>
       </div>
+    </div>
+
+
+    </div>
+    </div>
   </section>
 
   <footer>
-    Footer
+    © 2022 David Marquez
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
