@@ -11,7 +11,7 @@ window.onscroll = function(){
 
 var swiper = new Swiper(".slider-content", {
     slidesPerView: 3,
-    spaceBetween: 1,
+    spaceBetween: 50,
     slidesPerGroup: 3,
     navigation: {
       nextEl: ".swiper-button-next",

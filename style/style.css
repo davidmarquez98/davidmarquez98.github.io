@@ -221,16 +221,13 @@ h1{ /*Title*/
 /************************/
 
 .slider-container{
-    max-width:1120px;
+    max-width:1000px;
 }
 
 .card{
     display: inline-block;
-    background-color: #0A0A0A;
+    background-color: black;
     border-radius: 5px;
-    width: 300px;
-    height: 300px;
-    margin: 20px;
     cursor: pointer;
 }
 
@@ -286,7 +283,7 @@ h1{ /*Title*/
 }
 
 .container_tools ul{
-    background-color: #0A0A0A;
+    background-color: black;
     border-radius: 5px;;
     display: flex;
     list-style: none;
@@ -306,7 +303,7 @@ h1{ /*Title*/
 
 .title_tools{
     padding: 10px;
-    color:#3498DB;
+    color:#85C1E9;
 }
 .list_tools{
     margin: 20px;
@@ -318,9 +315,15 @@ h1{ /*Title*/
     grid-area: projects;
 }
 
+.project-card img{
+    width: 500px;
+    border: solid ;
+    border-radius: 5px;
+}
+
 /********************/
 /*Contenedor de FOOTER*/
 footer{
     grid-area: footer;
-    background-color: #0A0A0A;
+    background-color: black;
 }
