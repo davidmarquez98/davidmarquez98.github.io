@@ -40,7 +40,7 @@
           </a>
         </li>
         <li class="contact_me">
-          <a>
+          <a href="openModal()">
             <div class="container_title">
               <span class="title_contact_me">Contactame</span>
             </div>
@@ -62,6 +62,23 @@
       </ul>
     </div>
   </header>
+
+  <div class="contact-me-modal-container">
+    <div class="contact-me-modal-content">
+      <div class="">
+        <h2>Contact Me</h2>
+      </div>
+      <form>
+        <label for="name">Name</label>
+        <input name="name" type="text">
+        <label for="surname">Surname</label>
+        <input name="surname" type="text">
+        <label for="email">Email</label>
+        <input name="email" type="email">
+        <input type="text" placeholder="Message..">
+      </form>
+    </div>
+  </div>
 
   <section class="section_home" id="id_home">
     <div class="info-container">
@@ -193,54 +210,57 @@
     </div>
   </section>
 
-  <section class="proyectos" id="id_projectos">
+  <section class="section_projects" id="id_projectos">
     <div class="title">
       <h2 class="title_projects">
         Projectos
       </h2>
     </div>
     <div class="project-cards">
+
       <div class="project-card">
         <div class="project-card-container">
           <div class="project-card-content">
             <div class="project-card-image">
               <img src="img/portfolio.png"></img>
             </div>
-          </div>
-          <div class="project-card-content">
-            <span>My portfolio</span>
-            <p>
-              This is my first app where I show some of my educational information and
-              all my projects that I did meanwhile the time.
-            </p>
-          </div>
-          <div class="project-card-buttons">
-            <a target="" href="https://github.com/davidmarquez98/portfolio"><i class="fa-brands fa-square-github"></i></a>
+            <div class="project-card-info">
+              <span>My portfolio</span>
+              <p>
+                This is my first app where I show some of my educational information and
+                all my projects that I did meanwhile the time.
+              </p>
+            </div>
+            <div class="project-card-buttons">
+              <a target="_blank" href="https://github.com/davidmarquez98/portfolio">
+                <i class="fa-brands fa-square-github"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-card-container">
-          <div class="project-card-text">
-            <div class="comming-soon">COMMING SOON</div>
-          </div>
           <div class="project-card-content">
-            <p>💻 Working.. Nowadays, I am studying. Also, at the same time, I am doing PROJECTS
-              about my carrer. You can go to my GITHUB to have a look of my codes!
-            </p>
-          </div>
-          <div class="project-card-buttons">
-            <a target="_blank" href="https://github.com/davidmarquez98/portfolio"><i
-                class="fa-brands fa-square-github"></i></a>
+            <div class="project-card-text">
+              <div class="comming-soon">COMMING SOON</div>
+            </div>
+            <div class="project-card-info">
+              <p>💻 Working.. Nowadays, I am studying. Also, at the same time, I am doing PROJECTS
+                about my carrer. You can go to my GITHUB to have a look of my codes!
+              </p>
+            </div>
+            <div class="project-card-buttons">
+              <a target="_blank" href="https://github.com/davidmarquez98">
+                <i class="fa-brands fa-square-github"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-
-    </div>
-    </div>
   </section>
 
   <footer>
