@@ -15,39 +15,39 @@
 </head>
 
 <body>
-  <header id="id_header">
-    <div class="list_themes">
+  <header id="header-id">
+    <div class="list-themes">
       <ul>
         <li class="home">
           <a href="#id_home">
-            <div class="container_title">
+            <div class="theme-container">
               <span class="title_home">Home</span>
             </div>
           </a>
         </li>
         <li class="education">
           <a href="#id_education">
-            <div class="container_title">
+            <div class="theme-container">
               <span class="title_education">Formacion Academica</span>
             </div>
           </a>
         </li>
         <li class="projects">
           <a href="#id_projectos">
-            <div class="container_title">
+            <div class="theme-container">
               <span class="title_projects">Projectos</span>
             </div>
           </a>
         </li>
         <li class="contact_me">
-          <a href="openModal()">
-            <div class="container_title">
+          <a href="#exampleModal">
+            <div class="theme-container">
               <span class="title_contact_me">Contactame</span>
             </div>
           </a>
         </li>
         <li class="networks">
-          <div class="container_title">
+          <div class="theme-container">
             <span class="title_networks">Redes</span>
           </div>
           <div class="container_sub_menu">
@@ -63,23 +63,8 @@
     </div>
   </header>
 
-  <div class="contact-me-modal-container">
-    <div class="contact-me-modal-content">
-      <div class="">
-        <h2>Contact Me</h2>
-      </div>
-      <form>
-        <label for="name">Name</label>
-        <input name="name" type="text">
-        <label for="surname">Surname</label>
-        <input name="surname" type="text">
-        <label for="email">Email</label>
-        <input name="email" type="email">
-        <input type="text" placeholder="Message..">
-      </form>
-    </div>
-  </div>
-
+  <div class="lds-ripple"><div></div><div></div></div>
+  
   <section class="section_home" id="id_home">
     <div class="info-container">
       <div class="info-content">
@@ -101,21 +86,20 @@
   </section>
 
   <section class="section_education" id="id_education">
-    <div class="title">
+    <div class="title reveal">
       <h2 class="title_education">Formacion Academica</h2>
     </div>
 
-    <div class="slider-container swiper">
+    <div class="slider-container swiper reveal">
       <div class="slider-content">
         <div class="card-wrapper swiper-wrapper">
 
           <div class="card swiper-slide">
             <div class="card-container">
               <div class="card-image">
-                <img src="img/school.png" />
+                <img src="img/education/school.png">
                 <div class="card-text">
                   <span>Economia y Administracion</span>
-                  <p>asdkjadjhsadj hdsaj dhndfg dfggg gd sd sdd s dsd a da sdasd a das d sadgggg gs</p>
                 </div>
               </div>
               <div class="card-content">
@@ -127,7 +111,7 @@
           <div class="card swiper-slide">
             <div class="card-container">
               <div class="card-image">
-                <img src="img/university.jpg" />
+                <img src="img/education/university.jpg" />
                 <div class="card-text">
                   <span>Tecnicatura en Programacion</span>
                   <p>Uso básico de JavaScript, aprendizaje del lenguaje C (Variables, funciones,
@@ -144,7 +128,7 @@
           <div class="card swiper-slide">
             <div class="card-container">
               <div class="card-image">
-                <img src="img/udemy.png" />
+                <img src="img/education/java.png">
                 <div class="card-text">
                   <span> Universidad Java 2021 por Global Mentoring Ing.Ubaldo Acosta</span>
                   <p>Fundamentos, POO, Patrones de Diseño y buenas
@@ -162,7 +146,7 @@
             <div class="card-container">
               <div class="card-image">
                 <!--Ingles-->
-                <img src="img/udemy.png" />
+                <img src="img/education/css.jpg" />
                 <div class="card-text">
 
                 </div>
@@ -174,7 +158,7 @@
             <div class="card-container">
               <div class="card-image">
                 <!--Ingles-->
-                <img src="img/udemy.png" />
+                <img src="img/education/english.png" />
                 <div class="card-text">
 
                 </div>
@@ -189,7 +173,7 @@
     </div>
 
 
-    <div class="container_tools">
+    <div class="container_tools reveal">
       <!--Contenedor herramientas-->
       <h2 class="title_tools">Habilidades</h2>
       <div class="list_tools">
@@ -216,7 +200,7 @@
         Projectos
       </h2>
     </div>
-    <div class="project-cards">
+    <div class="project-cards reveal">
 
       <div class="project-card">
         <div class="project-card-container">

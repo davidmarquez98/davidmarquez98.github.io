@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-color: #0C0C0C  ;
+    background-color: #0C0C0C;
     color:white;
     display: grid;
     grid-template-columns: auto;
@@ -68,6 +68,53 @@ body::-webkit-scrollbar {
     border-radius: 20px;      
     border: 3px solid black;  
   }
+
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
 /********************/
 /*Container of HEADER*/
 /********************/
@@ -80,12 +127,12 @@ header{
 }
 
 /*TITLES*/
-.list_themes{
+.list-themes{
     height: 100%;
     width: 80%;
 }
 
-.list_themes ul{
+.list-themes ul{
     height: 100%;
 }
 .home, .education, .projects, .contact_me, .networks{
@@ -96,7 +143,7 @@ header{
     cursor: pointer;
 }
 
-.container_title{
+.theme-container{
     display: grid;
     place-items: center;
     height: 100%;
@@ -138,6 +185,18 @@ header{
     color: #641E16;
 }
 
+.reveal{
+    position: relative;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 /*SUB MENU NETWORKS*/
 .container_sub_menu{
     display: none;
@@ -169,26 +228,6 @@ header{
 }
 
 /**/
-
-.contact-me-modal-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    
-   
-}
-
-.contact-me-modal-content{
-    width: 700px;
-    height: 400px;
-    background-color: #0C0C0C;
-    border-radius: 5px;
-    border: 1px solid #F7DC6F;
-}
 
 /********************/
 /*Section of HOME*/
@@ -249,6 +288,10 @@ h1{ /*Title*/
 /**************************/
 /*Contenedor de EDUCATION*/
 /************************/
+
+.title_education{
+    text-align: center;
+}
 
 .slider-container{
     max-width:1000px;
