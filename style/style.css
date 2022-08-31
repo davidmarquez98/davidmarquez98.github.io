@@ -13,7 +13,7 @@ body{
     color:white;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 80px 625px 725px 725px 200px;
+    grid-template-rows: 80px 650px 850px 850px 200px;
     grid-template-areas: "header" "home" "education" "projects" "footer";
     z-index: -1;
 }
@@ -30,10 +30,6 @@ a{
     text-decoration: none;
 }
 
-.title{
-    padding: 30px;
-    height: 10%;
-}
 /*Scroll*/
     body::-webkit-scrollbar {
     width: 15px;               
@@ -234,7 +230,7 @@ h1{ /*Title*/
 .education-title{
     color: #3498DB;
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .slider-container{
@@ -340,7 +336,7 @@ h1{ /*Title*/
 
 .tools-container img:hover{
     width: 50px;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 .tools-title{
@@ -356,25 +352,40 @@ h1{ /*Title*/
     grid-area: projects;
 }
 
-.project-cards{
-    max-width: 1345px;
+.projects-title{
+    display: flex;
+    color:#58D68D;
+    justify-content: center;
+    font-size: 30px;
+    height: 150px;
 }
 
-.project-card{
-    display: inline-block;
+.projects-title h2{
+    margin-top: 30px;
+}
+
+.project-cards{
+    display: flex;
+    max-width: 1345px;
+    width: 100%;
 }
 
 .project-card-container{
-    height: 400px;
+    display: flex;
+    justify-content: center;
+    width: 670px;
+}
+
+.project-card{
+    height: 450px;
     width: 550px;
     border: 1px solid #58D68D;
     border-radius: 5px;
-    margin: 0 40px;
     background-color: black;
     transition: all 400ms ease;
 }
 
-.project-card-container:hover{
+.project-card:hover{
     box-shadow: 5px 5px 20px rgb(88, 214, 141,0.4);
     transform: translateY(-3%);
 }
@@ -393,12 +404,29 @@ h1{ /*Title*/
     width: 100%;
 }
 
-.project-card-text{
+.project-card-message{
+    color: #53966F;
+    font-weight: bold;
     width: 500px;
     height: 225px;
     display: grid;
     place-items: center;
     font-size: 35px;
+}
+
+.project-card-info{
+    text-align: center;
+    height: 150px;
+}
+
+.project-card-info span{
+    color: #53966F;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-card-info p{
+    color:#BEBEBE;
 }
 
 .project-card-buttons{
