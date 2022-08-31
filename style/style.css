@@ -18,10 +18,6 @@ body{
     z-index: -1;
 }
 
-p{
-    text-align: center;
-}
-
 li{
     list-style: none;
 }
@@ -247,19 +243,18 @@ h1{ /*Title*/
     background-color: black;
     border: 1px solid #3498DB;
     border-radius: 5px;
+    width: 500px;
+    height: 500px;
     cursor: pointer;
 }
 
 .card-container{
     text-align: center;
     width: 250px;
-    height: 250px;
-    margin: 25px;
 }
 
 .card-image{
     position: relative;
-    height: 75%;
     width: 100%;
 }
 
@@ -288,7 +283,7 @@ h1{ /*Title*/
 }
 
 .card-content{
-    margin: 8px 0;
+    
 }
 
 .card:hover .card-text{
@@ -415,11 +410,13 @@ h1{ /*Title*/
 }
 
 .project-card-info{
-    text-align: center;
     height: 150px;
 }
 
-.project-card-info span{
+.project-card-info h3{
+    display: grid;
+    place-items: center;
+    height: 60px;
     color: #53966F;
     font-size: 20px;
     font-weight: bold;
@@ -430,7 +427,19 @@ h1{ /*Title*/
 }
 
 .project-card-buttons{
+    display: grid;
+    place-items: center;
+    width: 40px;
+}
+
+.project-card-buttons i{
     font-size: 35px;
+    color: #53966F;
+}
+
+.project-card-buttons i:hover{
+    font-size: 40px;
+    transition: 0.3s;
 }
 /********************/
 /*Contenedor de FOOTER*/
@@ -439,9 +448,13 @@ footer{
     background-color: black;
 }
 
-footer h3{
-    text-align: center;
+footer h3, p{
     margin: 20px;
+    text-align: center;
+}
+
+footer p span{
+    color:#F7DC6F;
 }
 
 .copyright{
