@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-color: #0C0C0C;
+    background-color: #0C0C0C !important;
     color:white;
     display: grid;
     grid-template-columns: auto;
@@ -48,9 +48,9 @@ a{
 header{
     grid-area: header;
     position:sticky;
+    top: 0;
     background-color: rgb(12, 12, 12 , 0.9);
-    transition: top 0.5s;
-    z-index: 1;
+    z-index: 2;
 }
 
 .home-header{
@@ -162,7 +162,16 @@ header{
     color:#F5B7B1;
 }
 
-/**/
+/*MODAL*/
+
+.modal{
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+
+
 
 /********************/
 /*Section of HOME*/
@@ -328,13 +337,34 @@ h1{ /*Title*/
 }
 
 .tools-container img{
+    position: relative;
     width: 40px;
-
 }
 
-.tools-container img:hover{
-    width: 50px;
-    transition: 0.3s;
+.tools-container span{
+    display: none;
+    background-color: black;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 3px;
+    position: absolute;
+    bottom:-25px;
+}
+
+.tools-container span::after{
+    content: "";
+    display: block;
+    border-bottom: 8px solid black;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 8px);
+    
+}
+
+.tools-container img:hover .tools-list span{ 
+    display: inline-block;
 }
 
 .tools-title{
