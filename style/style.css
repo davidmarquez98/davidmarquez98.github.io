@@ -341,17 +341,17 @@ h1{ /*Title*/
     width: 40px;
 }
 
-.tools-container span{
-    display: none;
+.tool-name{
+    display: none; 
     background-color: black;
     font-size: 13px;
     border-radius: 5px;
-    padding: 3px;
+    padding: 5px;
     position: absolute;
     bottom:-25px;
 }
 
-.tools-container span::after{
+.tool-name::after{
     content: "";
     display: block;
     border-bottom: 8px solid black;
@@ -363,7 +363,12 @@ h1{ /*Title*/
     
 }
 
-.tools-container img:hover .tools-list span{ 
+.tools-container img:hover{
+    width: 50px;
+    transition: 0.3s;
+}
+
+.tools-container li:hover .tool-name{ 
     display: inline-block;
 }
 
