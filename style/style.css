@@ -94,8 +94,13 @@ header{
     display: grid;
     place-items: center;
     height: 100%;
+    width: 100%;
 }
 
+.contactme button{
+    background-color: #0C0C0C;
+    border: none;
+}
 .home:hover{
     background-color:#C39BD3;
 }
@@ -110,7 +115,7 @@ header{
     color:#0B5345; 
 }
 
-.contactme:hover, .contactme:hover .contactme-header{
+.contactme:hover button, .contactme:hover .contactme-header{
     background-color: #F9E79F;
     color: #9A7D0A;
 }
@@ -139,6 +144,7 @@ header{
     margin-left: 65px;
     height: 100px;
     width: 150px;
+    transition: all 500ms ease;
 }
 
 .sub_menu li {
@@ -165,14 +171,97 @@ header{
 /*MODAL*/
 
 .modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     background-color: rgb(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease;
 }
 
+.modal-container{
+    width: 600px;
+    height: 500px;
+    background-color: black;
+    border: 1px solid #F7DC6F;
+    border-radius: 5px;
+}
 
+.modal-header{
+    position: relative;
+    display: flex;
+    color: #F7DC6F;
+    font-size: 25px;
+    padding: 10px;
+}
 
+.modal-close{
+    position: absolute;
+    right: 20px;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 15px;
+    background-color: #0C0C0C;
+    border: 1px solid #F7DC6F;
+    border-radius: 5px;
+}
 
+.modal-title{
+    margin-left:28px;
+    margin-top: 2px;
+}
+
+.modal-content{
+    font-size: 16px;
+    margin: 40px;
+}
+
+.modal-content input,textarea{
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.modal-content input{
+    height: 30px;
+}
+
+.modal-content textarea{
+    height: 100px;
+}
+
+.field{
+    width: 500px;
+    background-color: #0C0C0C;
+    color: white;
+}
+
+.field::placeholder{
+    color: #CACFD2;
+}
+
+.modal-content-send{
+    position: relative;
+}
+
+.modal-send{
+    position: absolute;
+    right: 12px;
+    background-color: #0C0C0C;
+    font-size: 12px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #F7DC6F;    
+    width: 80px;
+    height: 50px;
+}
 /********************/
 /*Section of HOME*/
 /********************/

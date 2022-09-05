@@ -42,9 +42,12 @@ var swiper = new Swiper(".slider-content", {
   const modal = document.getElementById("modal");
   
   openModal.addEventListener("click",function(){
-    modal.showModal();
+    modal.style.visibility = "visible";
+    modal.style.opacity = "1";
   })
 
-  closeModal.addEventListener("click",function(){
-    modal.close();
+  closeModal.addEventListener("click", function(){
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
   })
+

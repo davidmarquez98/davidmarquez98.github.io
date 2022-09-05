@@ -46,10 +46,12 @@
             </div>
           </a>
         </li>
-        <li class="contactme" >
-          <div class="theme-container" id="open-modal">
-            <span class="contactme-header" data-bs-toggle="modal" data-bs-target="#exampleModal">Contactame</span>
-          </div>
+        <li class="contactme">
+          <button class="theme-container" id="open-modal">
+            <span class="contactme-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Contactame
+            </span>
+          </button>
         </li>
         <li class="networks">
           <div class="theme-container">
@@ -67,6 +69,37 @@
       </ul>
     </div>
   </header>
+
+  <div  class="modal" id="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Contact Me</h3>
+        <button id="close-modal" class="modal-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-content">
+        <form>
+          <div>
+            <label>Name*</label><br />
+            <input class="field" type="text" placeholder="Your name.."><br />
+          </div>
+          <div>
+            <label>Email adress*</label><br />
+            <input class="field" type="email" placeholder="Your email.."><br />
+          </div>
+          <div>
+            <label>Message*</label><br />
+            <textarea class="field" type="text" placeholder="Enter a message.."></textarea><br />
+          </div>
+          <div class="modal-content-send">
+            <input class="modal-send" type="submit" value="Send">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
 
   <section class="section-home" id="home-id">
     <div class="info-container">
@@ -123,7 +156,7 @@
                 </div>
               </div>
               <div class="card-content">
-                <p>UTN - FRA <br/>Abril 2021 - INCOMPLETO 1ER CUATRIMESTRE</p>
+                <p>UTN - FRA <br />Abril 2021 - INCOMPLETO 1ER CUATRIMESTRE</p>
               </div>
             </div>
           </div>
@@ -135,8 +168,8 @@
                 <div class="card-text">
                   <span> Universidad Java por Global Mentoring Ing.Ubaldo Acosta</span>
                   <p>
-                    Fundamentos, POO, Patrones de Diseño y buenas prácticas, 
-                    JDBC, Servlets y JSP's, Java EE, HTML, CSS, JavaScript, 
+                    Fundamentos, POO, Patrones de Diseño y buenas prácticas,
+                    JDBC, Servlets y JSP's, Java EE, HTML, CSS, JavaScript,
                     Struts 2, Hibernate, Spring, Angular.
                   </p>
                 </div>
@@ -174,14 +207,14 @@
                 <div class="card-text">
                   <span> B2 First - Cambridge</span>
                   <p>
-                    Comprensión lectora, preparación de un essay, desarrollo en el vocabulario 
-                    general, la pronunciación y en el habla.               
+                    Comprensión lectora, preparación de un essay, desarrollo en el vocabulario
+                    general, la pronunciación y en el habla.
                   </p>
                 </div>
               </div>
               <div class="card-content">
                 <p>
-                  Instituto Westminster School Of Languages <br/> Agosto 2022 - EN CURSO
+                  Instituto Westminster School Of Languages <br /> Agosto 2022 - EN CURSO
                 </p>
               </div>
             </div>
