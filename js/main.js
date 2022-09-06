@@ -1,4 +1,4 @@
-/*let principalUbication = window.pageYOffset;
+let principalUbication = window.pageYOffset;
 window.onscroll = function(){
     let actualDisplacement = window.pageYOffset;
     if(principalUbication >= actualDisplacement){
@@ -7,7 +7,7 @@ window.onscroll = function(){
         document.getElementById("header-id").style.top = '-80px';      
     }
     principalUbication = actualDisplacement;
-}*/
+}
 
 var swiper = new Swiper(".slider-content", {
     slidesPerView: 3,
@@ -51,3 +51,9 @@ var swiper = new Swiper(".slider-content", {
     modal.style.opacity = "0";
   })
 
+  const buttonSend = document.getElementById("send-mail");
+  buttonSend.addEventListener("click",function(e){
+    e.preventDefault();
+    window.location.href = "mailto:davidmarquez2222@outlook.com";
+
+  })

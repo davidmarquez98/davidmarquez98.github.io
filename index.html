@@ -57,8 +57,8 @@
           <div class="theme-container">
             <span class="networks-header">Redes</span>
           </div>
-          <div class="container_sub_menu">
-            <ul class="sub_menu">
+          <div class="submenu-container">
+            <ul class="submenu">
               <li><i class="fa-brands fa-linkedin"></i> &nbsp;&nbsp;<a target="_blank"
                   href="https://www.linkedin.com/in/david-ariel-marquez/"> Linkedin</a></li>
               <li><i class="fa-brands fa-square-github"></i>&nbsp;&nbsp;&nbsp;<a target="_blank"
@@ -70,7 +70,7 @@
     </div>
   </header>
 
-  <div  class="modal" id="modal">
+  <div class="modal" id="modal">
     <div class="modal-container">
       <div class="modal-header">
         <h3 class="modal-title">Contact Me</h3>
@@ -82,18 +82,18 @@
         <form>
           <div>
             <label>Name*</label><br />
-            <input class="field" type="text" placeholder="Your name.."><br />
+            <input id="name" class="field" type="text" placeholder="Your name.."><br />
           </div>
           <div>
             <label>Email adress*</label><br />
-            <input class="field" type="email" placeholder="Your email.."><br />
+            <input id="email" class="field" type="email" placeholder="Your email.."><br />
           </div>
           <div>
             <label>Message*</label><br />
-            <textarea class="field" type="text" placeholder="Enter a message.."></textarea><br />
+            <textarea id="message" class="field" type="text" placeholder="Enter a message.."></textarea><br />
           </div>
           <div class="modal-content-send">
-            <input class="modal-send" type="submit" value="Send">
+            <input id="send-mail" class="modal-send" type="submit" value="Send">
           </div>
 
         </form>
@@ -232,7 +232,9 @@
       <h2 class="tools-title">Habilidades</h2>
       <div class="tools-list">
         <ul>
-          <li><img src="img/java.logo.png"><span class="tool-name">Java</span></li>
+          <li>
+              <img src="img/java.logo.png"><span class="tool-name">Java</span>
+          </li>
           <li><img src="img/html-logo.png"><span class="tool-name">HTML</span></li>
           <li><img src="img/css3-logo.png"><span class="tool-name">CSS</span></li>
           <li><img src="img/javascript-logo.png"><span class="tool-name">JavaScript</span></li>

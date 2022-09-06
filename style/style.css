@@ -50,7 +50,8 @@ header{
     position:sticky;
     top: 0;
     background-color: rgb(12, 12, 12 , 0.9);
-    z-index: 2;
+    z-index: 5;
+    transition: all .5s ease;
 }
 
 .home-header{
@@ -84,7 +85,6 @@ header{
 }
 .home, .education, .projects, .contactme, .networks{
     display:inline-block;
-    font-size: 15px;
     height: 100%;
     width: 19%;
     cursor: pointer;
@@ -93,6 +93,8 @@ header{
 .theme-container{
     display: grid;
     place-items: center;
+    font-size: 14px;
+    font-weight: bold;
     height: 100%;
     width: 100%;
 }
@@ -100,6 +102,7 @@ header{
 .contactme button{
     background-color: #0C0C0C;
     border: none;
+    cursor: pointer;
 }
 .home:hover{
     background-color:#C39BD3;
@@ -138,34 +141,41 @@ header{
 }
 
 /*SUB MENU NETWORKS*/
-.container_sub_menu{
-    display: none;
-    position: absolute;
-    margin-left: 65px;
-    height: 100px;
-    width: 150px;
-    transition: all 500ms ease;
+.networks{
+    position: relative;
+    background-color: #0C0C0C;
 }
 
-.sub_menu li {
+.submenu-container{
+    visibility: hidden;
+    transition: all .5s;
+    transform: translateY(-100%);
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    z-index: -2;
+}
+
+.submenu li {
     margin:15px 10px 0 20px;
 }
 
-.sub_menu li i{
+.submenu li i{
     font-size: 25px;
 }
-.sub_menu a:hover{
+.submenu a:hover{
     text-decoration: underline;
 }
 
-.sub_menu li a:visited{
+.submenu li a:visited{
     color:white;
 }
 
-.networks:hover .container_sub_menu{
-    display: block;
+.networks:hover .submenu-container{
     background-color: rgb(100, 30, 22 , 0.9);
     color:#F5B7B1;
+    visibility: visible;
+    transform: translateY(0%);
 }
 
 /*MODAL*/
@@ -210,6 +220,7 @@ header{
     background-color: #0C0C0C;
     border: 1px solid #F7DC6F;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .modal-title{
@@ -223,10 +234,14 @@ header{
 }
 
 .modal-content input,textarea{
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 30px;
     border-radius: 5px;
     padding: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid grey;
 }
 
 .modal-content input{
@@ -235,6 +250,7 @@ header{
 
 .modal-content textarea{
     height: 100px;
+    resize: none;
 }
 
 .field{
@@ -261,6 +277,7 @@ header{
     border: 1px solid #F7DC6F;    
     width: 80px;
     height: 50px;
+    cursor: pointer;
 }
 /********************/
 /*Section of HOME*/
@@ -452,7 +469,7 @@ h1{ /*Title*/
     
 }
 
-.tools-container img:hover{
+.tools-container li:hover img{
     width: 50px;
     transition: 0.3s;
 }
