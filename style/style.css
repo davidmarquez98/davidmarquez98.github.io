@@ -1,6 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -8,22 +9,11 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
+.container{
     background-color: #0C0C0C !important;
-    color:white;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 80px 650px 850px 850px 200px;
+    grid-template-rows: 80px 850px 850px 850px 200px;
     grid-template-areas: "header" "home" "education" "projects" "footer";
-    z-index: -1;
-}
-
-li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
 }
 
 /*Scroll*/
@@ -49,8 +39,8 @@ header{
     grid-area: header;
     position:sticky;
     top: 0;
-    background-color: rgb(12, 12, 12 , 0.9);
-    z-index: 5;
+    background-color: rgb(12, 12, 12);
+    z-index: 2;
     transition: all .5s ease;
 }
 
@@ -73,47 +63,58 @@ header{
 .networks-header{
     color:#E74C3C; 
 }
-/*TITLES*/
-.list-themes{
-    display: inline-block;
+/*Titles*/
+.list-container{
+    display: flex;
     height: 100%;
-    width: 70%;
+    max-width: 1000px;
 }
 
-.list-themes ul{
+.list-container ul{
     height: 100%;
+    width: 100%;
 }
+
 .home, .education, .projects, .contactme, .networks{
     display:inline-block;
     height: 100%;
-    width: 19%;
+    width: 18%;
     cursor: pointer;
 }
 
-.theme-container{
+.header-title{
+    text-decoration: none;
+}
+
+.title-container{
+    background-color: #0C0C0C;
     display: grid;
     place-items: center;
     font-size: 14px;
     font-weight: bold;
     height: 100%;
     width: 100%;
+    z-index: 20;
 }
 
-.contactme button{
-    background-color: #0C0C0C;
+.button-contactme{
+    background-color: transparent;
     border: none;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
 }
-.home:hover{
+
+.home:hover .title-container{
     background-color:#C39BD3;
 }
 
-.education:hover , .education:hover .education-header{
+.education:hover .education-header, .education:hover .title-container{
     background-color:#7FB3D5; 
     color:#154360;
 }
 
-.projects:hover, .projects:hover .projects-header{
+.projects:hover .projects-header, .projects:hover .title-container{
     background-color: #A9DFBF;
     color:#0B5345; 
 }
@@ -123,7 +124,7 @@ header{
     color: #9A7D0A;
 }
 
-.networks:hover{
+.networks:hover .title-container{
     background-color: #F1948A;
     color: #641E16;
 }
@@ -143,39 +144,46 @@ header{
 /*SUB MENU NETWORKS*/
 .networks{
     position: relative;
-    background-color: #0C0C0C;
 }
 
-.submenu-container{
+.submenu{
     visibility: hidden;
+    opacity: 0;
     transition: all .5s;
     transform: translateY(-100%);
     position: absolute;
     height: 100px;
     width: 150px;
-    z-index: -2;
+    z-index: -4;
 }
 
-.submenu li {
+.submenu-container li {
     margin:15px 10px 0 20px;
+    list-style: none;
 }
 
-.submenu li i{
+.submenu-container li a{
+    text-decoration: none;
+}
+
+.submenu-container li i{
     font-size: 25px;
 }
-.submenu a:hover{
+.submenu-container a:hover{
     text-decoration: underline;
 }
 
-.submenu li a:visited{
+.submenu-container li a:visited{
     color:white;
 }
 
-.networks:hover .submenu-container{
-    background-color: rgb(100, 30, 22 , 0.9);
+.networks:hover .submenu{
+    background-color: rgb(100, 30, 22);
     color:#F5B7B1;
     visibility: visible;
+    opacity: 1;
     transform: translateY(0%);
+    z-index: -4;
 }
 
 /*MODAL*/
@@ -228,9 +236,15 @@ header{
     margin-top: 2px;
 }
 
+
 .modal-content{
     font-size: 16px;
     margin: 40px;
+}
+
+.modal-input-content label{
+    color: white;
+    font-weight: bolder;
 }
 
 .modal-content input,textarea{
@@ -244,22 +258,22 @@ header{
     border-bottom: 1px solid grey;
 }
 
-.modal-content input{
+.field{
     height: 30px;
 }
 
-.modal-content textarea{
+.field-message{
     height: 100px;
     resize: none;
 }
 
-.field{
+.field, .field-message{
     width: 500px;
     background-color: #0C0C0C;
     color: white;
 }
 
-.field::placeholder{
+.field::placeholder, .field-message::placeholder{
     color: #CACFD2;
 }
 
@@ -283,10 +297,12 @@ header{
 /*Section of HOME*/
 /********************/
 .section-home{
+    grid-area:home;
     display:grid;
     grid-template-columns: 70% auto;
     grid-row: auto;
     grid-template-areas: "info profile";
+    color: white;
 }
 
 /*Contenedor de Info*/
@@ -307,13 +323,20 @@ h1{ /*Title*/
     margin-top: -10px;
     margin-bottom: 30px;
 }
+
 .info-text{
     text-align: center;
     font-size: 18px;
     font-weight: bolder;
 }
 
-/*Contenedor de Perfil*/
+.info-text span{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #884EA0;
+}
+
+/*Container of PROFILE*/
 .profile-container{
     width: auto;
     grid-area: profile;
@@ -352,11 +375,13 @@ h1{ /*Title*/
 .slider-content{
     max-width: 990px;
     margin: 100px 0;
+    z-index: -10;
 }
 
 .card{
     display: inline-block;
     background-color: black;
+    color: white;
     border: 1px solid #3498DB;
     border-radius: 5px;
     cursor: pointer;
@@ -428,6 +453,7 @@ h1{ /*Title*/
     justify-content: center;
     list-style: none;
     background-color: black;
+    color: white;
     border-radius: 5px;
     margin:15px auto;
     height: 50%;
@@ -593,12 +619,19 @@ footer{
 }
 
 footer h3, p{
+    color: white;
     margin: 20px;
     text-align: center;
 }
 
-footer p span{
+footer p button{
     color:#F7DC6F;
+    background: transparent;
+}
+
+footer p button:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .copyright{
