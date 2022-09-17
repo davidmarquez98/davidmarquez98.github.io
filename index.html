@@ -23,39 +23,42 @@
   -->
   <div class="container">
     <header id="header-id">
-      <div class="list-container">
-        <ul>
+        <ul class="list-container">
           <li class="home">
-            <a class="header-title" href="#home-id">
-              <div class="title-container">
+            <div class="title-container">
+              <a class="header-title" href="#home-id">
                 <span class="home-header">Home</span>
-              </div>
-            </a>
+              </a>
+            </div>
           </li>
           <li class="education">
-            <a class="header-title" href="#education-id">
-              <div class="title-container">
-                <span class="education-header">Education</span>
-              </div>
-            </a>
+            <div class="title-container">
+              <a class="header-title" href="#education-id">
+                  <span class="education-header">Education</span>
+              </a>
+            </div>
           </li>
           <li class="projects">
-            <a class="header-title" href="#projects-id">
-              <div class="title-container">
-                <span class="projects-header">Projects</span>
-              </div>
-            </a>
+            <div class="title-container">
+              <a class="header-title" href="#projects-id">
+                  <span class="projects-header">Projects</span>
+              </a>
+            </div>
           </li>
           <li class="contactme">
-            <button class="button-contactme" id="open-modal">
-              <span class="contactme-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Contact Me
-              </span>
-            </button>
+            <div class="title-container">
+              <button class="button-contactme" id="open-modal">
+                <span class="contactme-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Contact Me
+                </span>
+              </button>
+            </div>
           </li>
           <li class="networks">
             <div class="title-container">
-              <span class="networks-header">Social Medias</span>
+              <div class="header-title">
+                <span class="networks-header">Social Medias</span>
+              </div>
             </div>
             <div class="submenu">
               <ul class="submenu-container">
@@ -67,7 +70,6 @@
             </div>
           </li>
         </ul>
-      </div>
     </header>
 
     <div class="modal" id="modal">
@@ -83,25 +85,48 @@
             <div class="modal-input">
               <div class="modal-input-content">
                 <label>Name*</label><br />
-              <input id="name" class="field" type="text" placeholder="Your name.." required><br />
-              </div>
-              <div class="modal-input-error">
-                The name hast to have only letters and spaces.
+                <input id="name" class="field" type="text" placeholder="Your name.." required><br />
+                <div class="icon-error">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="icon-right">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="modal-input-error">
+                  The name hast to have only letters and spaces.
+                </div>
               </div>
             </div>
             <div class="modal-input">
               <div class="modal-input-content">
                 <label>Email adress*</label><br />
                 <input id="email" class="field" type="email" placeholder="Your email.." required><br />
+                <div class="icon-error">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="icon-right">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="modal-input-error">
+                  Wrong email.
+                </div>
               </div>
-              <div class="modal-input-error"></div>
             </div>
             <div class="modal-input">
               <div class="modal-input-content">
                 <label>Message*</label><br />
-                <textarea id="message" class="field-message" type="text" placeholder="Enter a message.." required></textarea><br />
+                <textarea id="message" class="field-message" type="text" placeholder="Enter a message.."
+                  required></textarea><br />
+                <div class="icon-error">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="icon-right">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="modal-input-error">
+                  Introduce a message.
+                </div>
               </div>
-              <div class="modal-input-error"></div>
             </div>
             <div class="modal-content-send">
               <input id="send-mail" class="modal-send" type="submit" value="Send">
@@ -220,7 +245,7 @@
                   <div class="card-text">
                     <span> B2 First - Cambridge</span>
                     <p>
-                      Reading comprehension, development in general vocabulary, development 
+                      Reading comprehension, development in general vocabulary, development
                       in pronunciation and speech, preparation of an essay.
                     </p>
                   </div>

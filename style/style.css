@@ -10,7 +10,7 @@ html{
 }
 
 .container{
-    background-color: #0C0C0C !important;
+    background-color: #0C0C0C;
     display: grid;
     grid-template-rows: 80px 850px 850px 850px 200px;
     grid-template-areas: "header" "home" "education" "projects" "footer";
@@ -42,59 +42,62 @@ header{
     background-color: rgb(12, 12, 12);
     z-index: 2;
     transition: all .5s ease;
+    width: 100%;
 }
 
 .home-header{
     color:#884EA0;
+    font-weight: bolder;
 }
 
 .education-header{
     color:#3498DB;
+    font-weight: bolder;
 }
 
 .projects-header{
-    color:#58D68D 
+    color:#58D68D;
+    font-weight: bolder;
 }
 
 .contactme-header{
     color:#F7DC6F;
+    font-weight: bolder;
 }
 
 .networks-header{
     color:#E74C3C; 
+    font-weight: bolder;
 }
 /*Titles*/
+
+
 .list-container{
     display: flex;
     height: 100%;
     max-width: 1000px;
-}
-
-.list-container ul{
-    height: 100%;
-    width: 100%;
+    list-style: none;
 }
 
 .home, .education, .projects, .contactme, .networks{
-    display:inline-block;
     height: 100%;
-    width: 18%;
+    width: 20%;
     cursor: pointer;
 }
 
 .header-title{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
     text-decoration: none;
 }
 
 .title-container{
     background-color: #0C0C0C;
-    display: grid;
-    place-items: center;
     font-size: 14px;
-    font-weight: bold;
     height: 100%;
     width: 100%;
-    z-index: 20;
 }
 
 .button-contactme{
@@ -154,7 +157,7 @@ header{
     position: absolute;
     height: 100px;
     width: 150px;
-    z-index: -4;
+    z-index: -1;
 }
 
 .submenu-container li {
@@ -183,7 +186,6 @@ header{
     visibility: visible;
     opacity: 1;
     transform: translateY(0%);
-    z-index: -4;
 }
 
 /*MODAL*/
@@ -204,7 +206,7 @@ header{
 
 .modal-container{
     width: 600px;
-    height: 500px;
+    height: 600px;
     background-color: black;
     border: 1px solid #F7DC6F;
     border-radius: 5px;
@@ -216,6 +218,7 @@ header{
     color: #F7DC6F;
     font-size: 25px;
     padding: 10px;
+    height: 100px;
 }
 
 .modal-close{
@@ -238,8 +241,14 @@ header{
 
 
 .modal-content{
+    height: 500px;
     font-size: 16px;
-    margin: 40px;
+}
+
+
+.modal-content form{
+    height: 400px;
+    margin: 0 40px;
 }
 
 .modal-input-content label{
@@ -247,9 +256,21 @@ header{
     font-weight: bolder;
 }
 
-.modal-content input,textarea{
+
+.field{
+    height: 30px;
+}
+
+.field-message{
+    height: 80px;
+    resize: none;
+}
+
+.field, .field-message{
+    width: 500px;
+    background-color: #0C0C0C;
+    color: white;
     margin-top: 10px;
-    margin-bottom: 30px;
     border-radius: 5px;
     padding: 2px;
     border-top: none;
@@ -258,32 +279,64 @@ header{
     border-bottom: 1px solid grey;
 }
 
-.field{
-    height: 30px;
-}
-
-.field-message{
-    height: 100px;
-    resize: none;
-}
-
-.field, .field-message{
-    width: 500px;
-    background-color: #0C0C0C;
-    color: white;
-}
-
 .field::placeholder, .field-message::placeholder{
     color: #CACFD2;
 }
 
+.modal-input{
+    height: 120px;
+}
+
+.modal-input-content{
+
+    position: relative;
+}
+
+.icon-right{
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    background-color: #27AE60;
+    color: white;
+}
+
+.icon-error{
+    visibility: hidden;
+    background-color: #FF3838;
+    color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+}
+
+.modal-input-error{
+    visibility: hidden;
+    color: #FF3838;
+    font-weight: bolder;
+    position: absolute;
+    bottom: -25px;
+}
+
 .modal-content-send{
+    height: 100px;
     position: relative;
 }
 
 .modal-send{
     position: absolute;
-    right: 12px;
+    right: 18px;
+    bottom: 20px;
     background-color: #0C0C0C;
     font-size: 12px;
     color: white;
