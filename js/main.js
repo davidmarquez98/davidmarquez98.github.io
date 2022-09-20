@@ -58,11 +58,8 @@ closeModal.addEventListener("click", function () {
 })
 
 const form = document.getElementById("form");
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const message = document.getElementById("message").value;
-const iconRights = document.querySelectorAll("#icon-right");
-const iconErrors = document.querySelectorAll("#icon-error");
+const iconsRight = document.querySelectorAll("#icon-right");
+const iconsError = document.querySelectorAll("#icon-error");
 const messageError = document.querySelectorAll(".modal-input-error");
 const inputs = document.querySelectorAll(".field");
 const expressions = {
@@ -70,52 +67,58 @@ const expressions = {
   email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
 
+function changeToError(iconError, iconRight, message, input) {
+  iconError.style.visibility = "visible";
+  iconRight.style.visibility = "hidden";
+  message.style.visibility = "visible";
+  input.style.border = "1px solid red";
+}
+
+function changeToRight(iconError, iconRight, message, input) {
+  iconError.style.visibility = "hidden";
+  message.style.visibility = "hidden";
+  iconRight.style.visibility = "visible";
+  input.style.border = "1px solid green";
+}
+
+function erase(iconError, iconRight, message, input) {
+  iconRight.style.visibility = "hidden";
+  iconError.style.visibility = "hidden";
+  message.style.visibility = "hidden";
+  input.style.border = "1px solid white";
+}
+
 const validateForm = (e) => {
   switch (e.target.id) {
     case "name":
-      if(expressions.name.test(e.target.value)){
-        iconErrors[0].style.visibility = "hidden";
-        iconRights[0].style.visibility = "visible";
-        messageError[0].style.visibility = "hidden";
-      }else{
-        iconRights[0].style.visibility = "hidden";
-        iconErrors[0].style.visibility = "visible";
-        messageError[0].style.visibility = "visible";
+      if (expressions.name.test(e.target.value)) {
+        changeToRight(iconsError[0], iconsRight[0], messageError[0], inputs[0])
+      } else {
+        changeToError(iconsError[0], iconsRight[0], messageError[0], inputs[0])
+
       }
 
-      if(e.target.value == ""){
-        iconRights[0].style.visibility = "hidden";
-        iconErrors[0].style.visibility = "hidden";
-        messageError[0].style.visibility = "hidden";
+      if (e.target.value == "") {
+        erase(iconsError[0], iconsRight[0], messageError[0], inputs[0]);
       }
       break;
     case "email":
-      if(expressions.email.test(e.target.value)){
-        iconErrors[1].style.visibility = "hidden";
-        iconRights[1].style.visibility = "visible";
-        messageError[1].style.visibility = "hidden";
-      }else{
-        iconRights[1].style.visibility = "hidden";
-        iconErrors[1].style.visibility = "visible";
-        messageError[1].style.visibility = "visible";
+      if (expressions.email.test(e.target.value)) {
+        changeToRight(iconsError[1], iconsRight[1], messageError[1], inputs[1])
+      } else {
+        changeToError(iconsError[1], iconsRight[1], messageError[1], inputs[1])
       }
-      if(e.target.value == ""){
-        iconRights[1].style.visibility = "hidden";
-        iconErrors[1].style.visibility = "hidden";
-        messageError[1].style.visibility = "hidden";
+      if (e.target.value == "") {
+        erase(iconsError[1], iconsRight[1], messageError[1], inputs[1]);
       }
       break;
-      case "message":
-        if(e.target.value == ""){
-          iconRights[2].style.visibility = "hidden";
-          iconErrors[2].style.visibility = "visible";
-          messageError[2].style.visibility = "visible";
-        }else{
-          iconErrors[2].style.visibility = "hidden";
-          iconRights[2].style.visibility = "visible";
-          messageError[2].style.visibility = "hidden";
-        }
-        break;
+    case "message":
+      if (e.target.value == "") {
+        changeToError(iconsError[2], iconsRight[2], messageError[2], inputs[2]);
+      } else {
+        changeToRight(iconsError[2], iconsRight[2], messageError[2], inputs[2]);
+      }
+      break;
   }
 }
 
@@ -124,13 +127,20 @@ inputs.forEach((input) => {
   input.addEventListener("blur", validateForm);
 });
 
-if (name != null && email != null && message != null) {
-  form.addEventListener("submit", function (e,) {
-    const nameSent = document.getElementById("name").value;
-    const emailSent = document.getElementById("email").value;
-    const messageSent = document.getElementById("message").value;
+
+form.addEventListener("submit", function (e) {
+  const nameSent = document.getElementById("name").value;
+  const emailSent = document.getElementById("email").value;
+  const messageSent = document.getElementById("message").value;
+  if (expressions.name.test(nameSent) && expressions.email.test(emailSent) && messageSent != "" && messageSent != null) {
     e.preventDefault();
     window.location.href = `mailto:davidmarquez2222@outlook.com?subject=Hello, my name is ${nameSent}; ${emailSent}&body= ${messageSent}`;
-  })
-}
+  } else {
+    console.log("error");
+  }
+})
+
+
+
+
 

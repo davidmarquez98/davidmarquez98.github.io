@@ -70,6 +70,16 @@
             </div>
           </li>
         </ul>
+        <div class="header-languages-container">
+          <div class="header-languages-content">
+            <a>
+              <img src="img/english.png">
+            </a>
+            <a>
+              <img src="img/spanish.png">
+            </a>
+          </div>
+        </div>
     </header>
 
     <div class="modal" id="modal">
@@ -93,7 +103,7 @@
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div id="message-error" class="modal-input-error">
-                  The name has to have only letters and spaces.
+                  The name has to have only letters and spaces. Also, has to have 4-16 characters.
                 </div>
               </div>
             </div>
@@ -108,14 +118,14 @@
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="modal-input-error">
-                  Wrong email.
+                  Wrong email, you have to put a correct email. For example: yourname@gmail.com
                 </div>
               </div>
             </div>
             <div class="modal-textarea">
               <div class="modal-input-content">
                 <label>Message*</label><br />
-                <textarea id="message" class="field" type="text" placeholder="Enter a message.."></textarea>
+                <textarea id="message" class="field field-message" type="text" placeholder="Enter a message.."></textarea>
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>

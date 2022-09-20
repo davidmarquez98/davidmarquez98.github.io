@@ -37,6 +37,7 @@ html{
 /*Container of HEADER*/
 /********************/
 header{
+    display: flex;
     grid-area: header;
     position:sticky;
     top: 0;
@@ -72,11 +73,10 @@ header{
 }
 /*Titles*/
 
-
 .list-container{
     display: flex;
     height: 100%;
-    max-width: 1000px;
+    width: 70%;
     list-style: none;
 }
 
@@ -145,6 +145,23 @@ header{
     opacity: 1;
 }
 
+.header-languages-container{
+    display: flex;
+    width: auto;
+}
+
+.header-languages-content{
+    display: flex;
+    align-items: center;
+}
+
+.header-languages-content a{
+    cursor: pointer;
+}
+
+.header-languages-content a img{
+    width: 30px;
+}
 /*SUB MENU NETWORKS*/
 .networks{
     position: relative;
@@ -326,6 +343,7 @@ header{
     font-weight: bolder;
     position: absolute;
     bottom: -25px;
+    font-size: 12px;
 }
 
 .modal-textarea .modal-input-error{
@@ -687,6 +705,8 @@ footer h3, p{
 
 footer p button{
     color:#F7DC6F;
+    font-size: 16px;
+    font-weight: bolder;
     background: transparent;
 }
 
@@ -704,9 +724,9 @@ footer p button:hover{
 }
 
 
-@media screen and (max-width: 650px){
-    .title-container{
-        font-size: 0.5em;
+@media screen and (max-width: 850px){
+    header,section{
+        width: 100%;
     }
     
 }
