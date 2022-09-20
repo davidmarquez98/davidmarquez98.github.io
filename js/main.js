@@ -57,17 +57,80 @@ closeModal.addEventListener("click", function () {
   modal.style.opacity = "0";
 })
 
-const buttonSend = document.getElementById("send-mail");
+const form = document.getElementById("form");
 const name = document.getElementById("name").value;
 const email = document.getElementById("email").value;
 const message = document.getElementById("message").value;
+const iconRights = document.querySelectorAll("#icon-right");
+const iconErrors = document.querySelectorAll("#icon-error");
+const messageError = document.querySelectorAll(".modal-input-error");
+const inputs = document.querySelectorAll(".field");
+const expressions = {
+  name: /^[a-zA-Z\_\-]{4,16}$/,
+  email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+}
 
-if(name != null && email != null && message != null){
-  buttonSend.addEventListener("click", function (e,) {
+const validateForm = (e) => {
+  switch (e.target.id) {
+    case "name":
+      if(expressions.name.test(e.target.value)){
+        iconErrors[0].style.visibility = "hidden";
+        iconRights[0].style.visibility = "visible";
+        messageError[0].style.visibility = "hidden";
+      }else{
+        iconRights[0].style.visibility = "hidden";
+        iconErrors[0].style.visibility = "visible";
+        messageError[0].style.visibility = "visible";
+      }
+
+      if(e.target.value == ""){
+        iconRights[0].style.visibility = "hidden";
+        iconErrors[0].style.visibility = "hidden";
+        messageError[0].style.visibility = "hidden";
+      }
+      break;
+    case "email":
+      if(expressions.email.test(e.target.value)){
+        iconErrors[1].style.visibility = "hidden";
+        iconRights[1].style.visibility = "visible";
+        messageError[1].style.visibility = "hidden";
+      }else{
+        iconRights[1].style.visibility = "hidden";
+        iconErrors[1].style.visibility = "visible";
+        messageError[1].style.visibility = "visible";
+      }
+      if(e.target.value == ""){
+        iconRights[1].style.visibility = "hidden";
+        iconErrors[1].style.visibility = "hidden";
+        messageError[1].style.visibility = "hidden";
+      }
+      break;
+      case "message":
+        if(e.target.value == ""){
+          iconRights[2].style.visibility = "hidden";
+          iconErrors[2].style.visibility = "visible";
+          messageError[2].style.visibility = "visible";
+        }else{
+          iconErrors[2].style.visibility = "hidden";
+          iconRights[2].style.visibility = "visible";
+          messageError[2].style.visibility = "hidden";
+        }
+        break;
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("keyup", validateForm);
+  input.addEventListener("blur", validateForm);
+});
+
+if (name != null && email != null && message != null) {
+  form.addEventListener("submit", function (e,) {
     const nameSent = document.getElementById("name").value;
     const emailSent = document.getElementById("email").value;
     const messageSent = document.getElementById("message").value;
-    e.preventDefault();    
-    window.location.href = `mailto:davidmarquez2222@outlook.com?subject=Hello, my name is ${nameSent}; ${emailSent}&body= ${messageSent}`;  
+    e.preventDefault();
+    window.location.href = `mailto:davidmarquez2222@outlook.com?subject=Hello, my name is ${nameSent}; ${emailSent}&body= ${messageSent}`;
   })
 }
+

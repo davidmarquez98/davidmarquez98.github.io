@@ -13,6 +13,7 @@ html{
     background-color: #0C0C0C;
     display: grid;
     grid-template-rows: 80px 850px 850px 850px 200px;
+    width: 100%;
     grid-template-areas: "header" "home" "education" "projects" "footer";
 }
 
@@ -288,7 +289,6 @@ header{
 }
 
 .modal-input-content{
-
     position: relative;
 }
 
@@ -328,8 +328,16 @@ header{
     bottom: -25px;
 }
 
+.modal-textarea .modal-input-error{
+    bottom: -20px;
+}
+
+.modal-textarea .icon-error,.modal-textarea .icon-right{
+    bottom: 10px;
+}
+
 .modal-content-send{
-    height: 100px;
+    height: 120px;
     position: relative;
 }
 
@@ -342,8 +350,8 @@ header{
     color: white;
     border-radius: 5px;
     border: 1px solid #F7DC6F;    
-    width: 80px;
-    height: 50px;
+    width: 60px;
+    height: 40px;
     cursor: pointer;
 }
 /********************/
@@ -693,4 +701,12 @@ footer p button:hover{
     position: relative;
     top: 80px;
     padding-left: 10px;
+}
+
+
+@media screen and (max-width: 650px){
+    .title-container{
+        font-size: 0.5em;
+    }
+    
 }

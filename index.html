@@ -81,30 +81,30 @@
           </button>
         </div>
         <div class="modal-content">
-          <form>
+          <form id="form">
             <div class="modal-input">
               <div class="modal-input-content">
                 <label>Name*</label><br />
-                <input id="name" class="field" type="text" placeholder="Your name.." required><br />
-                <div class="icon-error">
+                <input id="name" class="field" type="text" placeholder="Your name..">
+                <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
-                <div class="icon-right">
+                <div id="icon-right" class="icon-right">
                   <i class="fa-solid fa-check"></i>
                 </div>
-                <div class="modal-input-error">
-                  The name hast to have only letters and spaces.
+                <div id="message-error" class="modal-input-error">
+                  The name has to have only letters and spaces.
                 </div>
               </div>
             </div>
             <div class="modal-input">
               <div class="modal-input-content">
                 <label>Email adress*</label><br />
-                <input id="email" class="field" type="email" placeholder="Your email.." required><br />
-                <div class="icon-error">
+                <input id="email" class="field" type="email" placeholder="Your email..">
+                <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
-                <div class="icon-right">
+                <div id="icon-right" class="icon-right">
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="modal-input-error">
@@ -112,15 +112,14 @@
                 </div>
               </div>
             </div>
-            <div class="modal-input">
+            <div class="modal-textarea">
               <div class="modal-input-content">
                 <label>Message*</label><br />
-                <textarea id="message" class="field-message" type="text" placeholder="Enter a message.."
-                  required></textarea><br />
-                <div class="icon-error">
+                <textarea id="message" class="field" type="text" placeholder="Enter a message.."></textarea>
+                <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
-                <div class="icon-right">
+                <div id="icon-right" class="icon-right">
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="modal-input-error">
