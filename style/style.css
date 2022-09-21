@@ -147,12 +147,14 @@ header{
 
 .header-languages-container{
     display: flex;
-    width: auto;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
 }
 
 .header-languages-content{
     display: flex;
-    align-items: center;
+    color: white;
 }
 
 .header-languages-content a{
@@ -725,8 +727,5 @@ footer p button:hover{
 
 
 @media screen and (max-width: 850px){
-    header,section{
-        width: 100%;
-    }
     
 }

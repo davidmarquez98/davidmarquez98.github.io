@@ -1,3 +1,5 @@
+/* STICKING HEADER */
+
 let principalUbication = window.pageYOffset;
 window.onscroll = function () {
   let actualDisplacement = window.pageYOffset;
@@ -9,6 +11,7 @@ window.onscroll = function () {
   principalUbication = actualDisplacement;
 }
 
+/* SWIPER */
 var swiper = new Swiper(".slider-content", {
   slidesPerView: 3,
   spaceBetween: 50,
@@ -19,8 +22,7 @@ var swiper = new Swiper(".slider-content", {
   },
 });
 
-window.addEventListener("scroll", reveal);
-
+/* FADE REVEAL SECTION */
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -37,6 +39,9 @@ function reveal() {
   }
 }
 
+window.addEventListener("scroll", reveal);
+
+/* MODAL WINDOW */
 const openModal = document.getElementById("open-modal");
 const openModalTwo = document.getElementById("open-modal-two")
 const closeModal = document.getElementById("close-modal");
@@ -57,6 +62,7 @@ closeModal.addEventListener("click", function () {
   modal.style.opacity = "0";
 })
 
+/* SENT FORM*/
 const form = document.getElementById("form");
 const iconsRight = document.querySelectorAll("#icon-right");
 const iconsError = document.querySelectorAll("#icon-error");
