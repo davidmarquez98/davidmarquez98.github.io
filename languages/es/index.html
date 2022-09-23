@@ -6,7 +6,7 @@
   <title>My Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="img/logo.jpg">
+  <link rel="icon" href="../../img/logo/logo.jpg">
   <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,7 @@
         <li class="contactme">
           <div class="header-title-container">
             <button class="header-contactme-button" id="open-modal"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Contact Me
+              Contactame
           </button>
           </div>
         </li>
@@ -79,7 +79,7 @@
     <div class="modal" id="modal">
       <div class="modal-container">
         <div class="modal-header">
-          <h3 class="modal-title">Contact Me</h3>
+          <h3 class="modal-title">Contactame</h3>
           <button id="close-modal" class="modal-close">
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -88,23 +88,23 @@
           <form id="form">
             <div class="modal-input">
               <div class="modal-input-content">
-                <label>Name*</label><br />
-                <input id="name" class="field" type="text" placeholder="Your name..">
+                <label>Nombre*</label><br />
+                <input id="name" class="field" type="text" placeholder="Tu nombre..">
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div id="icon-right" class="icon-right">
                   <i class="fa-solid fa-check"></i>
                 </div>
-                <div id="message-error" class="modal-input-error">
-                  The name has to have only letters and spaces. Also, has to have 4-16 characters.
+                <div class="modal-input-error">
+                  <p>El nombre debe tener solamente letras o espacios. Tambien, se permite solamente de 4-16 caracteres.</p>
                 </div>
               </div>
             </div>
             <div class="modal-input">
               <div class="modal-input-content">
-                <label>Email adress*</label><br />
-                <input id="email" class="field" type="email" placeholder="Your email..">
+                <label>Direccion email*</label><br />
+                <input id="email" class="field" type="text" placeholder="Tu email..">
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -112,15 +112,15 @@
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="modal-input-error">
-                  Wrong email, you have to put a correct email. For example: yourname@gmail.com
+                  <p>Email incorrecto, debes ingresar un email correcto. Por ejemplo: tunombre@gmail.com</p>
                 </div>
               </div>
             </div>
             <div class="modal-textarea">
               <div class="modal-input-content">
-                <label>Message*</label><br />
+                <label>Mensaje*</label><br />
                 <textarea id="message" class="field field-message" type="text"
-                  placeholder="Enter a message.."></textarea>
+                  placeholder="Introduce un mensaje.."></textarea>
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -128,7 +128,7 @@
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="modal-input-error">
-                  Introduce a message.
+                  <p>Ingresa un mensaje.</p>
                 </div>
               </div>
             </div>
@@ -136,6 +136,11 @@
               <input id="send-mail" class="modal-send" type="submit" value="Send">
             </div>
           </form>
+          <div class="modal-message-error-container">
+            <div class="modal-message-error-content">
+              ERROR: Informacion incorrecta.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -315,7 +320,7 @@
                 <a target="_blank" href="https://github.com/davidmarquez98/portfolio">
                   <i class="fa-brands fa-square-github"></i>
                 </a>
-                <a target="_blank" href="https://github.com/davidmarquez98">
+                <a target="_blank" href="https://davidmarquez98.github.io">
                   <i class="fa-solid fa-circle-play"></i>
                 </a>
               </div>

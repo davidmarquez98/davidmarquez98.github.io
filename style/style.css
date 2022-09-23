@@ -167,7 +167,7 @@ header{
     color: #9A7D0A;
 }
 
-.networks:hover .header-title-container{
+.networks:hover .header-title-container, .networks:hover .header-networks{
     background-color: #F1948A;
     color: #641E16;
 }
@@ -300,6 +300,7 @@ header{
 
 
 .modal-content{
+    position: relative;
     height: 500px;
     font-size: 16px;
 }
@@ -386,15 +387,21 @@ header{
 
 .modal-input-error{
     visibility: hidden;
-    color: #FF3838;
-    font-weight: bolder;
-    position: absolute;
-    bottom: -25px;
     font-size: 12px;
+    position: absolute;
+    bottom: -4em;
+    left: -1.5em;
+    height: 5em;
 }
 
+
+.modal-input-error p{
+    color: #FF3838;
+    font-weight: bolder;
+    text-align: start;
+}
 .modal-textarea .modal-input-error{
-    bottom: -20px;
+    bottom: -4em;
 }
 
 .modal-textarea .icon-error,.modal-textarea .icon-right{
@@ -418,6 +425,22 @@ header{
     width: 60px;
     height: 40px;
     cursor: pointer;
+}
+
+.modal-message-error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF3838;
+    color: white;
+    height: 3em;
+    width: 25em;
+    font-weight: bolder;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 3.5em;
+    left: 3em;
+    visibility: hidden;
 }
 /********************/
 /*Section of HOME*/

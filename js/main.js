@@ -1,5 +1,5 @@
 /* LOADER */
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
   document.getElementById("loader").classList.toggle("loaderGone");
 });
 
@@ -29,7 +29,7 @@ var swiper = new Swiper(".slider-content", {
 });
 
 var screen = parseInt(screen.width.toString())
-if(screen < 850){
+if (screen < 850) {
   swiper = new Swiper(".slider-content", {
     slidesPerView: 2,
     spaceBetween: 50,
@@ -84,12 +84,10 @@ closeModal.addEventListener("click", function () {
 const form = document.getElementById("form");
 const iconsRight = document.querySelectorAll("#icon-right");
 const iconsError = document.querySelectorAll("#icon-error");
-const messageError = document.querySelectorAll(".modal-input-error");
+const messagesError = document.querySelectorAll(".modal-input-error");
 const inputs = document.querySelectorAll(".field");
-const expressions = {
-  name: /^[a-zA-Z\_\-]{4,16}$/,
-  email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-}
+const expressions = {name: /^[a-zA-Z\_\-]{4,16}$/, email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/};
+
 
 function changeToError(iconError, iconRight, message, input) {
   iconError.style.visibility = "visible";
@@ -105,46 +103,58 @@ function changeToRight(iconError, iconRight, message, input) {
   input.style.border = "1px solid green";
 }
 
-function erase(iconError, iconRight, message, input) {
-  iconRight.style.visibility = "hidden";
+function eraseError(iconError, iconRight, message, input){
   iconError.style.visibility = "hidden";
   message.style.visibility = "hidden";
+  iconRight.style.visibility = "hidden";
   input.style.border = "1px solid white";
+}
+
+function validateName(name){
+  if (expressions.name.test(name)) {
+        changeToRight(iconsError[0], iconsRight[0], messagesError[0], inputs[0]);
+      } else{
+        changeToError(iconsError[0], iconsRight[0], messagesError[0], inputs[0]);
+      }
+}
+
+function validateEmail(email){
+  if (expressions.email.test(email)) {
+    changeToRight(iconsError[1], iconsRight[1], messagesError[1], inputs[1]);
+  } else {
+    changeToError(iconsError[1], iconsRight[1], messagesError[1], inputs[1]);
+  }
+}
+
+function validateMessage(message){
+  if (message == "") {
+    changeToError(iconsError[2], iconsRight[2], messagesError[2], inputs[2]);
+  } else {
+    changeToRight(iconsError[2], iconsRight[2], messagesError[2], inputs[2]);
+  }
 }
 
 const validateForm = (e) => {
   switch (e.target.id) {
     case "name":
-      if (expressions.name.test(e.target.value)) {
-        changeToRight(iconsError[0], iconsRight[0], messageError[0], inputs[0])
-      } else {
-        changeToError(iconsError[0], iconsRight[0], messageError[0], inputs[0])
-      }
-
-      if (e.target.value == "") {
-        erase(iconsError[0], iconsRight[0], messageError[0], inputs[0]);
-      }
+      if(e.target.value == ""){
+        eraseError(iconsError[0], iconsRight[0], messagesError[0], inputs[0]);
+      }else{
+        validateName(e.target.value);
+      }   
       break;
     case "email":
-      if (expressions.email.test(e.target.value)) {
-        changeToRight(iconsError[1], iconsRight[1], messageError[1], inputs[1])
-      } else {
-        changeToError(iconsError[1], iconsRight[1], messageError[1], inputs[1])
-      }
-      if (e.target.value == "") {
-        erase(iconsError[1], iconsRight[1], messageError[1], inputs[1]);
-      }
+        if (e.target.value == "") {
+          eraseError(iconsError[1], iconsRight[1], messagesError[1], inputs[1]);
+        }else{
+          validateEmail(e.target.value);
+        }
       break;
     case "message":
-      if (e.target.value == "") {
-        changeToError(iconsError[2], iconsRight[2], messageError[2], inputs[2]);
-      } else {
-        changeToRight(iconsError[2], iconsRight[2], messageError[2], inputs[2]);
-      }
+      eraseError(iconsError[2], iconsRight[2], messagesError[2], inputs[2]);
       break;
   }
 }
-
 inputs.forEach((input) => {
   input.addEventListener("keyup", validateForm);
   input.addEventListener("blur", validateForm);
@@ -155,13 +165,28 @@ form.addEventListener("submit", function (e) {
   const nameSent = document.getElementById("name").value;
   const emailSent = document.getElementById("email").value;
   const messageSent = document.getElementById("message").value;
+  const messageError = document.querySelector(".modal-message-error-container");
+
   if (expressions.name.test(nameSent) && expressions.email.test(emailSent) && messageSent != "" && messageSent != null) {
     e.preventDefault();
+    messageError.style.visibility = "hidden";
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
     window.location.href = `mailto:davidmarquez2222@outlook.com?subject=Hello, my name is ${nameSent}; ${emailSent}&body= ${messageSent}`;
   } else {
-    console.log("error");
+    e.preventDefault();
+    validateName(nameSent);
+    validateEmail(emailSent);
+    validateMessage(messageSent);
+    messageError.style.visibility = "visible";
   }
 })
+
+
+
+
+
+
 
 
 
