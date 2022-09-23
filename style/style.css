@@ -394,7 +394,6 @@ header{
     height: 5em;
 }
 
-
 .modal-input-error p{
     color: #FF3838;
     font-weight: bolder;
@@ -494,7 +493,7 @@ h1{ /*Title*/
     display: grid;
     place-items: center;
     margin-top: 80px ;
-    gap: 10px;
+    gap: 1em;
 }
 .home-profile-content img{
     width: 250px;
@@ -505,6 +504,35 @@ h1{ /*Title*/
 .home-profile-profession{
     font-size: 2em;
     font-weight: bolder;
+}
+
+.home-profile-cv-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-profile-cv-content{
+    background-color: #884EA0;
+    border-radius: 5px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-profile-cv-content a{
+    color: white;
+    font-size: 0.9em;
+    font-weight: bolder;
+    text-decoration: none;
+    
+}
+
+.home-profile-cv-content a:hover{
+    text-decoration: underline;
 }
 /**************************/
 /*Contenedor de EDUCATION*/
