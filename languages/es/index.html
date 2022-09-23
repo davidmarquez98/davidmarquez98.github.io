@@ -6,7 +6,7 @@
   <title>My Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="img/logo/logo.jpg">
+  <link rel="icon" href="img/logo.jpg">
   <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,65 +16,64 @@
 
 <body>
   <div class="container">
+    <div class="lds-dual-ring" id="loader"></div>
     <header id="header-id">
-        <ul class="list-container">
-          <li class="home">
-            <div class="title-container">
-              <a class="header-title" href="#home-id">
-                <span class="home-header">Home</span>
-              </a>
-            </div>
-          </li>
-          <li class="education">
-            <div class="title-container">
-              <a class="header-title" href="#education-id">
-                  <span class="education-header">Education</span>
-              </a>
-            </div>
-          </li>
-          <li class="projects">
-            <div class="title-container">
-              <a class="header-title" href="#projects-id">
-                  <span class="projects-header">Projects</span>
-              </a>
-            </div>
-          </li>
-          <li class="contactme">
-            <div class="title-container">
-              <button class="button-contactme" id="open-modal">
-                <span class="contactme-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Contact Me
-                </span>
-              </button>
-            </div>
-          </li>
-          <li class="networks">
-            <div class="title-container">
-              <div class="header-title">
-                <span class="networks-header">Social Medias</span>
-              </div>
-            </div>
-            <div class="submenu">
-              <ul class="submenu-container">
-                <li><i class="fa-brands fa-linkedin"></i> &nbsp;&nbsp;<a target="_blank"
-                    href="https://www.linkedin.com/in/david-ariel-marquez/"> Linkedin</a></li>
-                <li><i class="fa-brands fa-square-github"></i>&nbsp;&nbsp;&nbsp;<a target="_blank"
-                    href="https://github.com/davidmarquez98"> Github</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div class="header-languages-container">
-          <div class="header-languages-content">
-            <a href="indexEN.html">
-              <img src="img/languages/english.png">
-            </a>
-            &nbsp;|&nbsp;
-            <a href="indexES.html">
-              <img src="img/languages/spanish.png">
+      <ul class="header-list-container">
+        <li class="home">
+          <div class="header-title-container">
+            <a class="header-title" href="#home-id">
+              <span class="header-home">Inicio</span>
             </a>
           </div>
+        </li>
+        <li class="education">
+          <div class="header-title-container">
+            <a class="header-title" href="#education-id">
+              <span class="header-education">Educacion</span>
+            </a>
+          </div>
+        </li>
+        <li class="projects">
+          <div class="header-title-container">
+            <a class="header-title" href="#projects-id">
+              <span class="header-projects">Projectos</span>
+            </a>
+          </div>
+        </li>
+        <li class="contactme">
+          <div class="header-title-container">
+            <button class="header-contactme-button" id="open-modal"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Contact Me
+          </button>
+          </div>
+        </li>
+        <li class="networks">
+          <div class="header-title-container">
+            <div class="header-title">
+              <span class="header-networks">Redes Sociales</span>
+            </div>
+          </div>
+          <div class="header-submenu">
+            <ul class="header-submenu-container">
+              <li><i class="fa-brands fa-linkedin"></i> &nbsp;&nbsp;<a target="_blank"
+                  href="https://www.linkedin.com/in/david-ariel-marquez/"> Linkedin</a></li>
+              <li><i class="fa-brands fa-square-github"></i>&nbsp;&nbsp;&nbsp;<a target="_blank"
+                  href="https://github.com/davidmarquez98"> Github</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="header-languages-container">
+        <div class="header-languages-content">
+          <a href="../../index.html">
+            <img src="img/languages/english.png">
+          </a>
+          &nbsp;|&nbsp;
+          <a href="/languages/es/index.html">
+            <img src="img/languages/spanish.png">
+          </a>
         </div>
+      </div>
     </header>
 
     <div class="modal" id="modal">
@@ -120,7 +119,8 @@
             <div class="modal-textarea">
               <div class="modal-input-content">
                 <label>Message*</label><br />
-                <textarea id="message" class="field field-message" type="text" placeholder="Enter a message.."></textarea>
+                <textarea id="message" class="field field-message" type="text"
+                  placeholder="Enter a message.."></textarea>
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -135,47 +135,46 @@
             <div class="modal-content-send">
               <input id="send-mail" class="modal-send" type="submit" value="Send">
             </div>
-
           </form>
         </div>
       </div>
     </div>
 
     <section class="section-home" id="home-id">
-      <div class="info-container">
-        <div class="info-content">
-          <h1>¡Hello, I am David, Welcome to my Portfolio! 💼</h1>
-          <p class="info-text">
-            I am a Developer in programming who is 24 years old and live in Argentina, Buenos Aires.
-            I invite you to take a look on my information, projects and my social medias. Also, you can
-            send me an mail to recommendations, tips or just contact me.
-            Thank you to be here! <br /><br /><span>I hope you have a great day.</span>
+      <div class="home-info-container">
+        <div class="home-info-content">
+          <h1>¡Hola, me llamo David, Bienvenidos a mi portafolio! 💼</h1>
+          <p class="home-info-text">
+            Soy un desarrolador en programacion con 24 años y vivo en Argentina, Buenos Aires.
+            Te invito a ver mi informacion, mis projectos y mis redes sociales. Tambien, podes
+            enviarme un email para recomendaciones, consejos o solo contactarme.
+            Gracias por estar aca! <br /><br /><span>Espero que tengas un buen dia.</span>
           </p>
         </div>
       </div>
-      <div class="profile-container">
-        <div class="profile">
+      <div class="home-profile-container">
+        <div class="home-profile-content">
           <img src="img/profile/profile.jpg" />
-          <div class="profile-profesion">Developer Full Stack</div>
+          <div class="home-profile-profession">Desarrollador Full Stack</div>
         </div>
       </div>
     </section>
 
     <section class="section-education" id="education-id">
       <div class="education-title reveal">
-        <h2>Education</h2>
+        <h2>Educacion</h2>
       </div>
 
       <div class="slider-container swiper reveal">
         <div class="slider-content">
           <div class="card-wrapper swiper-wrapper">
-
+  
             <div class="card swiper-slide">
               <div class="card-container">
                 <div class="card-image">
                   <img src="img/education/school.png">
                   <div class="card-text">
-                    <span>Economy and Administration</span>
+                    <span>Economia y administracion</span>
                   </div>
                 </div>
                 <div class="card-content">
@@ -183,25 +182,24 @@
                 </div>
               </div>
             </div>
-
+  
             <div class="card swiper-slide">
               <div class="card-container">
                 <div class="card-image">
                   <img src="img/education/university.jpg" />
                   <div class="card-text">
                     <span>Tecnicatura en Programacion</span>
-                    <p>Basic use of JavaScript, language C (Functions,
-                      arrays, pointers, files)
+                    <p>Basico uso de JavaScript, lenguaje C (Funciones,
+                      arrays, punteros, archivos)
                     </p>
                   </div>
                 </div>
                 <div class="card-content">
-                  <p>UTN - FRA <br />April 2021 - FIRST FOUR-MONTH PERIOD
-                    INCOMPLETED</p>
+                  <p>UTN - FRA <br />Abril 2021 - 1er CUATRIMESTRE INCOMPLETO</p>
                 </div>
               </div>
             </div>
-
+  
             <div class="card swiper-slide">
               <div class="card-container">
                 <div class="card-image">
@@ -209,19 +207,18 @@
                   <div class="card-text">
                     <span> Universidad Java por Global Mentoring Ing.Ubaldo Acosta</span>
                     <p>
-                      Fundaments of OOP, design patterns and good
-                      practices, JDBC, Servlets y JSP's, Java EE, HTML,
-                      CSS, JavaScript, Struts 2, Hibernate, Spring, Angular.
-
+                      Fundamentos, POO, Patrones de Diseño y buenas prácticas, JDBC,
+                      Servlets y JSP's, Java EE, HTML, CSS, JavaScript, Struts 2,
+                      Hibernate, Spring, Angular.
                     </p>
                   </div>
                 </div>
                 <div class="card-content">
-                  <p>Udemy | January 2022 - August 2022</p>
+                  <p>Udemy | Enero 2022 - Agosto 2022</p>
                 </div>
               </div>
             </div>
-
+  
             <div class="card swiper-slide">
               <div class="card-container">
                 <div class="card-image">
@@ -229,18 +226,18 @@
                   <div class="card-text">
                     <span>Universidad CSS por Global Mentoring Ing.Ubaldo Acosta</span>
                     <p>
-                      Introduction of CSS, selectors, manage of colours, borders, margins, padding,
-                      box, fuentes, float , icons, propiety of display, position of elements,
-                      gradients, box shadow, flexbox.
+                      Introducción a CSS, selectores, manejo de colores, borders, margin, padding,
+                      box, fuentes, float , íconos, propiedad display, posición de elementos,
+                      gradientes, box shadow, flexbox.
                     </p>
                   </div>
                   <div class="card-content">
-                    <p>Udemy | August 2022 - September 2022</p>
+                    <p>Udemy | Agosto 2022 - Septiembre 2022</p>
                   </div>
                 </div>
               </div>
             </div>
-
+  
             <div class="card swiper-slide">
               <div class="card-container">
                 <div class="card-image">
@@ -249,18 +246,19 @@
                   <div class="card-text">
                     <span> B2 First - Cambridge</span>
                     <p>
-                      Reading comprehension, preparation of an essay, development in general vocabulary, pronunciation and speech.
+                      Comprencion lectora, preparacion de un essay, desarrollo en el vocabulario general, la pronunciacion
+                      y el habla.
                     </p>
                   </div>
                 </div>
                 <div class="card-content">
                   <p>
-                    Instituto Westminster School Of Languages <br /> August 2021 - IN PROGRESS
+                    Instituto Westminster School Of Languages <br /> Agosto 2021 - EN CURSO
                   </p>
                 </div>
               </div>
             </div>
-
+  
           </div>
         </div>
         <div class="swiper-button-prev"></div>
@@ -270,7 +268,7 @@
 
       <div class="tools-container reveal">
         <!--Contenedor herramientas-->
-        <h2 class="tools-title">Tools</h2>
+        <h2 class="tools-title">Herramientas</h2>
         <div class="tools-list">
           <ul>
             <li>
@@ -294,11 +292,11 @@
     <section class="section-projects" id="projects-id">
       <div class="projects-title reveal">
         <h2>
-          Projects
+          Projectos
         </h2>
       </div>
       <div class="project-cards reveal">
-
+  
         <div class="project-card-container">
           <div class="project-card">
             <div class="project-card-content">
@@ -306,31 +304,36 @@
                 <img src="img/projects/portfolio.png"></img>
               </div>
               <div class="project-card-info">
-                <h3>My portfolio</h3>
+                <h3>Mi portafolio</h3>
                 <p>
-                  This is my first app where I show some of my educational information and
-                  all my projects that I did meanwhile the time.
+                  Este es mi primer pagina donde muestro algo de mi formacion educacional y todos mis projectos que hice
+                  durante
+                  todo este tiempo.
                 </p>
               </div>
               <div class="project-card-buttons">
                 <a target="_blank" href="https://github.com/davidmarquez98/portfolio">
                   <i class="fa-brands fa-square-github"></i>
                 </a>
+                <a target="_blank" href="https://github.com/davidmarquez98">
+                  <i class="fa-solid fa-circle-play"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-
+  
         <div class="project-card-container">
           <div class="project-card">
             <div class="project-card-content">
               <div class="project-card-message">
-                <div class="comming-soon">COMMING SOON</div>
+                <div class="comming-soon">PROXIMAMENTE</div>
               </div>
               <div class="project-card-info">
-                <h3>💻 Working.. </h3>
-                <p>Nowadays, I am studying. Also, at the same time, I am doing PROJECTS
-                  about my carrer. You can go to my GITHUB to have a look of my codes!
+                <h3>💻 Trabajando.. </h3>
+                <p>Actualmente, estoy estudiando. Tambien, al mismo tiempo, estoy haciendo projectos sobre mi carrera.
+                  Podes entrar
+                  a mi GITHUB para ver mi codigo!
                 </p>
               </div>
               <div class="project-card-buttons">
@@ -342,20 +345,19 @@
           </div>
         </div>
       </div>
-
     </section>
-
+    
     <footer>
-      <h3>Thank you for visiting my first web page!</h3>
+      <h3>Gracias por visitar mi primera pagina web!</h3>
       <p>
-        Any tip or doubt, you can click on <button id="open-modal-two">"Contact Me"</button> and send me an email.
+        Cualquier consejo o duda, podes darle click a <button id="open-modal-two">"Contact Me"</button> y enviar un
+        email.
       </p>
       <div class="copyright">
         <span>© 2022 David Marquez</span>
       </div>
     </footer>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/00b2c971fa.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>

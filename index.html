@@ -6,7 +6,7 @@
   <title>My Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="img/logo.jpg">
+  <link rel="icon" href="img/logo/logo.jpg">
   <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,46 +16,45 @@
 
 <body>
   <div class="container">
+    <div class="lds-dual-ring" id="loader"></div>
     <header id="header-id">
-      <ul class="list-container">
+      <ul class="header-list-container">
         <li class="home">
-          <div class="title-container">
+          <div class="header-title-container">
             <a class="header-title" href="#home-id">
-              <span class="home-header">Inicio</span>
+              <span class="header-home">Home</span>
             </a>
           </div>
         </li>
         <li class="education">
-          <div class="title-container">
+          <div class="header-title-container">
             <a class="header-title" href="#education-id">
-              <span class="education-header">Educacion</span>
+              <span class="header-education">Education</span>
             </a>
           </div>
         </li>
         <li class="projects">
-          <div class="title-container">
+          <div class="header-title-container">
             <a class="header-title" href="#projects-id">
-              <span class="projects-header">Projectos</span>
+              <span class="header-projects">Projects</span>
             </a>
           </div>
         </li>
         <li class="contactme">
-          <div class="title-container">
-            <button class="button-contactme" id="open-modal">
-              <span class="contactme-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Contactame
-              </span>
+          <div class="header-title-container">
+            <button class="header-contactme-button" id="open-modal"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Contact Me
             </button>
           </div>
         </li>
         <li class="networks">
-          <div class="title-container">
+          <div class="header-title-container">
             <div class="header-title">
-              <span class="networks-header">Redes Sociales</span>
+              <span class="header-networks">Social Medias</span>
             </div>
           </div>
-          <div class="submenu">
-            <ul class="submenu-container">
+          <div class="header-submenu">
+            <ul class="header-submenu-container">
               <li><i class="fa-brands fa-linkedin"></i> &nbsp;&nbsp;<a target="_blank"
                   href="https://www.linkedin.com/in/david-ariel-marquez/"> Linkedin</a></li>
               <li><i class="fa-brands fa-square-github"></i>&nbsp;&nbsp;&nbsp;<a target="_blank"
@@ -66,11 +65,11 @@
       </ul>
       <div class="header-languages-container">
         <div class="header-languages-content">
-          <a href="indexEN.html">
+          <a href="../../index.html">
             <img src="img/languages/english.png">
           </a>
           &nbsp;|&nbsp;
-          <a href="indexES.html">
+          <a href="/languages/es/index.html">
             <img src="img/languages/spanish.png">
           </a>
         </div>
@@ -80,7 +79,7 @@
     <div class="modal" id="modal">
       <div class="modal-container">
         <div class="modal-header">
-          <h3 class="modal-title">Contactame</h3>
+          <h3 class="modal-title">Contact Me</h3>
           <button id="close-modal" class="modal-close">
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -89,8 +88,8 @@
           <form id="form">
             <div class="modal-input">
               <div class="modal-input-content">
-                <label>Nombre*</label><br />
-                <input id="name" class="field" type="text" placeholder="Tu nombre..">
+                <label>Name*</label><br />
+                <input id="name" class="field" type="text" placeholder="Your name..">
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -98,14 +97,14 @@
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div id="message-error" class="modal-input-error">
-                  El nombre debe tener solo letras y espacios. Tambien, se permite de 4-16 caracteres.
+                  The name has to have only letters and spaces. Also, has to have 4-16 characters.
                 </div>
               </div>
             </div>
             <div class="modal-input">
               <div class="modal-input-content">
-                <label>Direccion email*</label><br />
-                <input id="email" class="field" type="email" placeholder="Tu email..">
+                <label>Email adress*</label><br />
+                <input id="email" class="field" type="email" placeholder="Your email..">
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -113,15 +112,15 @@
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="modal-input-error">
-                  Email incorrecto, debes ingresar un email correcto. Por ejemplo: yourname@gmail.com
+                  Wrong email, you have to put a correct email. For example: yourname@gmail.com
                 </div>
               </div>
             </div>
             <div class="modal-textarea">
               <div class="modal-input-content">
-                <label>Mensaje*</label><br />
+                <label>Message*</label><br />
                 <textarea id="message" class="field field-message" type="text"
-                  placeholder="Introduce tu mensaje.."></textarea>
+                  placeholder="Enter a message.."></textarea>
                 <div id="icon-error" class="icon-error">
                   <i class="fa-solid fa-xmark"></i>
                 </div>
@@ -129,42 +128,46 @@
                   <i class="fa-solid fa-check"></i>
                 </div>
                 <div class="modal-input-error">
-                  Introduce un mensaje.
+                  Introduce a message.
                 </div>
               </div>
             </div>
             <div class="modal-content-send">
-              <input id="send-mail" class="modal-send" type="submit" value="Enviar">
+              <input id="send-mail" class="modal-send" type="submit" value="Send">
             </div>
-
           </form>
+          <div class="modal-message-error-container">
+            <div class="modal-message-error-content">
+              ERROR: You introduced wrong information.
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <section class="section-home" id="home-id">
-      <div class="info-container">
-        <div class="info-content">
-          <h1>¡Hola, me llamo David, Bienvenidos a mi portafolio! 💼</h1>
-          <p class="info-text">
-            Soy un desarrolador en programacion con 24 años y vivo en Argentina, Buenos Aires.
-            Te invito a ver mi informacion, mis projectos y mis redes sociales. Tambien, podes
-            un email para recomendaciones, consejos o solo contactarme.
-            Gracias por estar aca! <br /><br /><span>Espero que tengas un buen dia.</span>
+      <div class="home-info-container">
+        <div class="home-info-content">
+          <h1>¡Hello, I am David, Welcome to my Portfolio! 💼</h1>
+          <p class="home-info-text">
+            I am a Developer in programming who is 24 years old and live in Argentina, Buenos Aires.
+            I invite you to take a look on my information, projects and my social medias. Also, you can
+            send me an mail to recommendations, tips or just contact me.
+            Thank you to be here! <br /><br /><span>I hope you have a great day.</span>
           </p>
         </div>
       </div>
-      <div class="profile-container">
-        <div class="profile">
+      <div class="home-profile-container">
+        <div class="home-profile-content">
           <img src="img/profile/profile.jpg" />
-          <div class="profile-profesion">Desarrollador Full Stack</div>
+          <div class="home-profile-profession">Developer Full Stack</div>
         </div>
       </div>
     </section>
 
     <section class="section-education" id="education-id">
       <div class="education-title reveal">
-        <h2>Educacion</h2>
+        <h2>Education</h2>
       </div>
 
       <div class="slider-container swiper reveal">
@@ -176,7 +179,7 @@
                 <div class="card-image">
                   <img src="img/education/school.png">
                   <div class="card-text">
-                    <span>Economia y administracion</span>
+                    <span>Economy and Administration</span>
                   </div>
                 </div>
                 <div class="card-content">
@@ -191,13 +194,14 @@
                   <img src="img/education/university.jpg" />
                   <div class="card-text">
                     <span>Tecnicatura en Programacion</span>
-                    <p>Basico uso de JavaScript, language C (Funciones,
-                      arrays, punteros, archivos)
+                    <p>Basic use of JavaScript, language C (Functions,
+                      arrays, pointers, files)
                     </p>
                   </div>
                 </div>
                 <div class="card-content">
-                  <p>UTN - FRA <br />Abril 2021 - 1er CUATRIMESTRE INCOMPLETO</p>
+                  <p>UTN - FRA <br />April 2021 - FIRST FOUR-MONTH PERIOD
+                    INCOMPLETED</p>
                 </div>
               </div>
             </div>
@@ -209,14 +213,15 @@
                   <div class="card-text">
                     <span> Universidad Java por Global Mentoring Ing.Ubaldo Acosta</span>
                     <p>
-                      Fundamentos, POO, Patrones de Diseño y buenas prácticas, JDBC,
-                      Servlets y JSP's, Java EE, HTML, CSS, JavaScript, Struts 2,
-                      Hibernate, Spring, Angular.
+                      Fundaments of OOP, design patterns and good
+                      practices, JDBC, Servlets y JSP's, Java EE, HTML,
+                      CSS, JavaScript, Struts 2, Hibernate, Spring, Angular.
+
                     </p>
                   </div>
                 </div>
                 <div class="card-content">
-                  <p>Udemy | Enero 2022 - Agosto 2022</p>
+                  <p>Udemy | January 2022 - August 2022</p>
                 </div>
               </div>
             </div>
@@ -228,13 +233,13 @@
                   <div class="card-text">
                     <span>Universidad CSS por Global Mentoring Ing.Ubaldo Acosta</span>
                     <p>
-                      Introducción a CSS, selectores, manejo de colores, borders, margin, padding,
-                      box, fuentes, float , íconos, propiedad display, posición de elementos,
-                      gradientes, box shadow, flexbox.
+                      Introduction of CSS, selectors, manage of colours, borders, margins, padding,
+                      box, fuentes, float , icons, propiety of display, position of elements,
+                      gradients, box shadow, flexbox.
                     </p>
                   </div>
                   <div class="card-content">
-                    <p>Udemy | Agosto 2022 - Septiembre 2022</p>
+                    <p>Udemy | August 2022 - September 2022</p>
                   </div>
                 </div>
               </div>
@@ -248,13 +253,14 @@
                   <div class="card-text">
                     <span> B2 First - Cambridge</span>
                     <p>
-                      Comprencion lectora, preparacion de un essay, desarrollo en el vocabulario general, la pronunciacion y el habla. 
+                      Reading comprehension, preparation of an essay, development in general vocabulary, pronunciation
+                      and speech.
                     </p>
                   </div>
                 </div>
                 <div class="card-content">
                   <p>
-                    Instituto Westminster School Of Languages <br /> Agosto 2021 - EN CURSO
+                    Instituto Westminster School Of Languages <br /> August 2021 - IN PROGRESS
                   </p>
                 </div>
               </div>
@@ -293,11 +299,10 @@
     <section class="section-projects" id="projects-id">
       <div class="projects-title reveal">
         <h2>
-          Projectos
+          Projects
         </h2>
       </div>
       <div class="project-cards reveal">
-
         <div class="project-card-container">
           <div class="project-card">
             <div class="project-card-content">
@@ -305,15 +310,18 @@
                 <img src="img/projects/portfolio.png"></img>
               </div>
               <div class="project-card-info">
-                <h3>Mi portafolio</h3>
+                <h3>My portfolio</h3>
                 <p>
-                  Este es mi primer pagina donde muestro algo de mi formacion educacional y todos mis projectos que hice durante
-                  todo este tiempo.
+                  This is my first app where I show some of my educational information and
+                  all my projects that I did meanwhile the time.
                 </p>
               </div>
               <div class="project-card-buttons">
                 <a target="_blank" href="https://github.com/davidmarquez98/portfolio">
                   <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a target="_blank" href="https://github.com/davidmarquez98">
+                  <i class="fa-solid fa-circle-play"></i>
                 </a>
               </div>
             </div>
@@ -324,12 +332,12 @@
           <div class="project-card">
             <div class="project-card-content">
               <div class="project-card-message">
-                <div class="comming-soon">PROXIMAMENTE</div>
+                <div class="comming-soon">COMMING SOON</div>
               </div>
               <div class="project-card-info">
-                <h3>💻 Trabajando.. </h3>
-                <p>Actualmente, estoy estudiando. Tambien, al mismo tiempo, estoy haciendo projectos sobre mi carrera. Podes entrar 
-                  a mi GITHUB para ver mi codigo! 
+                <h3>💻 Working.. </h3>
+                <p>Nowadays, I am studying. Also, at the same time, I am doing PROJECTS
+                  about my carrer. You can go to my GITHUB to have a look of my codes!
                 </p>
               </div>
               <div class="project-card-buttons">
@@ -345,10 +353,9 @@
     </section>
 
     <footer>
-      <h3>Gracias por visitar mi primera pagina web!</h3>
+      <h3>Thank you for visiting my first web page!</h3>
       <p>
-        Cualquier consejo o duda, podes darle click a <button id="open-modal-two">"Contact Me"</button> y enviar un
-        email.
+        Any tip or doubt, you can click on <button id="open-modal-two">"Contact Me"</button> and send me an email.
       </p>
       <div class="copyright">
         <span>© 2022 David Marquez</span>

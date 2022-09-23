@@ -12,7 +12,8 @@ html{
 .container{
     background-color: #0C0C0C;
     display: grid;
-    grid-template-rows: 80px 850px 850px 850px 200px;
+    grid-template-rows: 80px 850px 950px 850px 200px;
+    grid-template-columns: 100%;
     width: 100%;
     grid-template-areas: "header" "home" "education" "projects" "footer";
 }
@@ -32,7 +33,44 @@ html{
     border: 3px solid black;  
   }
 
+  .lds-dual-ring {
+    background-color: #0C0C0C;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s ease;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #884EA0 transparent #884EA0 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
+  .loaderGone{
+    visibility: hidden;
+    opacity: 0;
+  }
 /********************/
 /*Container of HEADER*/
 /********************/
@@ -47,33 +85,32 @@ header{
     width: 100%;
 }
 
-.home-header{
+.header-home{
     color:#884EA0;
     font-weight: bolder;
 }
 
-.education-header{
+.header-education{
     color:#3498DB;
     font-weight: bolder;
 }
 
-.projects-header{
+.header-projects{
     color:#58D68D;
     font-weight: bolder;
 }
 
-.contactme-header{
+.header-contactme-button{
     color:#F7DC6F;
-    font-weight: bolder;
 }
 
-.networks-header{
+.header-networks{
     color:#E74C3C; 
     font-weight: bolder;
 }
 /*Titles*/
 
-.list-container{
+.header-list-container{
     display: flex;
     height: 100%;
     width: 70%;
@@ -94,41 +131,43 @@ header{
     text-decoration: none;
 }
 
-.title-container{
+.header-title-container{
     background-color: #0C0C0C;
-    font-size: 14px;
+    font-size: 0.9em;
     height: 100%;
     width: 100%;
 }
 
-.button-contactme{
+.header-contactme-button{
     background-color: transparent;
+    font-weight: bolder;
+    font-size: 1em;
     border: none;
     cursor: pointer;
     height: 100%;
     width: 100%;
 }
 
-.home:hover .title-container{
+.home:hover .header-title-container{
     background-color:#C39BD3;
 }
 
-.education:hover .education-header, .education:hover .title-container{
+.education:hover .header-education, .education:hover .header-title-container{
     background-color:#7FB3D5; 
     color:#154360;
 }
 
-.projects:hover .projects-header, .projects:hover .title-container{
+.projects:hover .header-projects, .projects:hover .header-title-container{
     background-color: #A9DFBF;
     color:#0B5345; 
 }
 
-.contactme:hover button, .contactme:hover .contactme-header{
+.contactme:hover button, .contactme:hover .header-contactme-button{
     background-color: #F9E79F;
     color: #9A7D0A;
 }
 
-.networks:hover .title-container{
+.networks:hover .header-title-container{
     background-color: #F1948A;
     color: #641E16;
 }
@@ -169,7 +208,7 @@ header{
     position: relative;
 }
 
-.submenu{
+.header-submenu{
     visibility: hidden;
     opacity: 0;
     transition: all .5s;
@@ -180,27 +219,27 @@ header{
     z-index: -1;
 }
 
-.submenu-container li {
+.header-submenu-container li {
     margin:15px 10px 0 20px;
     list-style: none;
 }
 
-.submenu-container li a{
+.header-submenu-container li a{
     text-decoration: none;
 }
 
-.submenu-container li i{
+.header-submenu-container li i{
     font-size: 25px;
 }
-.submenu-container a:hover{
+.header-submenu-container a:hover{
     text-decoration: underline;
 }
 
-.submenu-container li a:visited{
+.header-submenu-container li a:visited{
     color:white;
 }
 
-.networks:hover .submenu{
+.networks:hover .header-submenu{
     background-color: rgb(100, 30, 22);
     color:#F5B7B1;
     visibility: visible;
@@ -267,8 +306,14 @@ header{
 
 
 .modal-content form{
+    position: relative;
     height: 400px;
     margin: 0 40px;
+}
+
+.modal-message-error-container{
+    position:absolute;
+    color: white;
 }
 
 .modal-input-content label{
@@ -380,63 +425,62 @@ header{
 .section-home{
     grid-area:home;
     display:grid;
-    grid-template-columns: 70% auto;
+    grid-template-columns: 70% 30%;
     grid-row: auto;
     grid-template-areas: "info profile";
     color: white;
 }
 
 /*Contenedor de Info*/
-.info-container{
+.home-info-container{
     grid-area: info;
     height: 100%;
 }
 
-.info-content{
+.home-info-content{
     width: 90%;
     margin:150px auto;
 }
 
 h1{ /*Title*/
     color:#884EA0;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
     margin-top: -10px;
     margin-bottom: 30px;
 }
 
-.info-text{
+.home-info-text{
     text-align: center;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bolder;
 }
 
-.info-text span{
-    font-size: 20px;
+.home-info-text span{
+    font-size: 2em;
     font-weight: bolder;
     color: #884EA0;
 }
 
 /*Container of PROFILE*/
-.profile-container{
-    width: auto;
+.home-profile-container{
     grid-area: profile;
 }
 
-.profile{
+.home-profile-content{
     display: grid;
     place-items: center;
     margin-top: 80px ;
     gap: 10px;
 }
-.profile img{
+.home-profile-content img{
     width: 250px;
     border-radius: 30%;
     border: 10px solid #884EA0;
 }
 
-.profile-profesion{
-    font-size: 30px;
+.home-profile-profession{
+    font-size: 2em;
     font-weight: bolder;
 }
 /**************************/
@@ -446,7 +490,7 @@ h1{ /*Title*/
 .education-title{
     color: #3498DB;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
 }
 
 .slider-container{
@@ -461,9 +505,8 @@ h1{ /*Title*/
 
 .card{
     display: inline-block;
-    background-color: black;
+    background-color: #202020;
     color: white;
-    border: 1px solid #3498DB;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -487,7 +530,7 @@ h1{ /*Title*/
 
 .card-text{
     text-align: center;
-    font-size: 13px;
+    font-size: 0.8em;
     position: absolute;
     top: 0;
     height: 100%;
@@ -507,7 +550,7 @@ h1{ /*Title*/
 
 .card-content{
     margin: -10px;
-    font-size: 14px;
+    font-size: 0.8em;
 }
 
 .card:hover .card-text{
@@ -533,7 +576,7 @@ h1{ /*Title*/
     display: flex;
     justify-content: center;
     list-style: none;
-    background-color: black;
+    background-color: #202020;
     color: white;
     border-radius: 5px;
     margin:15px auto;
@@ -556,18 +599,18 @@ h1{ /*Title*/
 
 .tool-name{
     display: none; 
-    background-color: black;
-    font-size: 13px;
+    background-color: #202020;
+    font-size: 0.8em;
     border-radius: 5px;
     padding: 5px;
     position: absolute;
-    bottom:-25px;
+    bottom:-5px;
 }
 
 .tool-name::after{
     content: "";
     display: block;
-    border-bottom: 8px solid black;
+    border-bottom: 8px solid #202020;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     position: absolute;
@@ -586,9 +629,9 @@ h1{ /*Title*/
 }
 
 .tools-title{
-    font-size: 30px;
+    padding-left: 20px;
+    font-size: 2em;
     color:#3498DB;
-    padding: 10px;
 }
 
 /********************/
@@ -602,7 +645,7 @@ h1{ /*Title*/
     display: flex;
     color:#58D68D;
     justify-content: center;
-    font-size: 30px;
+    font-size: 2em;
     height: 150px;
 }
 
@@ -619,15 +662,22 @@ h1{ /*Title*/
 .project-card-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 670px;
 }
 
+.project-card-content{
+    height: 100%;
+}
+
 .project-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 450px;
     width: 550px;
-    border: 1px solid #58D68D;
     border-radius: 5px;
-    background-color: black;
+    background-color: #202020;
     transition: all 400ms ease;
 }
 
@@ -636,40 +686,38 @@ h1{ /*Title*/
     transform: translateY(-3%);
 }
 
-.project-card-content{
-    margin:25px;
-}
 
 .project-card-image {
-    width: 500px;
-    height: 225px;
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
 }
 
 .project-card-image img{
-    width: 100%;
+    width: 30em;
 }
 
 .project-card-message{
     color: #53966F;
     font-weight: bold;
-    width: 500px;
-    height: 225px;
+    width: 100%;
+    height: 60%;
     display: grid;
     place-items: center;
-    font-size: 35px;
+    font-size: 3em;
 }
 
 .project-card-info{
-    height: 150px;
+    height: 25%;
 }
 
 .project-card-info h3{
     display: grid;
     place-items: center;
-    height: 60px;
     color: #53966F;
-    font-size: 20px;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -678,13 +726,18 @@ h1{ /*Title*/
 }
 
 .project-card-buttons{
-    display: grid;
-    place-items: center;
-    width: 40px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding-left: 1em;
 }
 
+.project-card-buttons a{
+    margin-left: 1em;
+}
 .project-card-buttons i{
-    font-size: 35px;
+    font-size: 2em;
     color: #53966F;
 }
 
@@ -696,20 +749,22 @@ h1{ /*Title*/
 /*Contenedor de FOOTER*/
 footer{
     grid-area: footer;
-    background-color: black;
+    background-color:#131313;
 }
 
 footer h3, p{
     color: white;
     margin: 20px;
     text-align: center;
+    font-size: 1em;
 }
 
 footer p button{
     color:#F7DC6F;
-    font-size: 16px;
+    font-size: 1.1em;
     font-weight: bolder;
     background: transparent;
+    border: none;
 }
 
 footer p button:hover{
@@ -719,7 +774,7 @@ footer p button:hover{
 
 .copyright{
     color: grey;
-    font-size: 12px;
+    font-size: 0.7em;
     position: relative;
     top: 80px;
     padding-left: 10px;
@@ -727,5 +782,36 @@ footer p button:hover{
 
 
 @media screen and (max-width: 850px){
-    
+    .section-home{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-row: auto auto;
+        grid-template-areas: "info profile";
+        color: white;
+    }
+
+    .home-profile-content img{
+        width: 8em;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    .home-info-text{
+        font-size: 0.8em;
+    }
+
+    .home-info-text span{
+        font-size: 1em;
+    }
+
+    .education-title{
+        font-size: 1.2em;
+    }
+
+    .card-image img{
+        width: 6em;
+        height: 6em;
+    }
 }

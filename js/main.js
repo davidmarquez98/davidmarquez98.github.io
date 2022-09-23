@@ -1,3 +1,9 @@
+/* LOADER */
+window.addEventListener("load", function(){
+  document.getElementById("loader").classList.toggle("loaderGone");
+});
+
+
 /* STICKING HEADER */
 
 let principalUbication = window.pageYOffset;
@@ -22,6 +28,18 @@ var swiper = new Swiper(".slider-content", {
   },
 });
 
+var screen = parseInt(screen.width.toString())
+if(screen < 850){
+  swiper = new Swiper(".slider-content", {
+    slidesPerView: 2,
+    spaceBetween: 50,
+    slidesPerGroup: 2,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
 /* FADE REVEAL SECTION */
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
@@ -101,7 +119,6 @@ const validateForm = (e) => {
         changeToRight(iconsError[0], iconsRight[0], messageError[0], inputs[0])
       } else {
         changeToError(iconsError[0], iconsRight[0], messageError[0], inputs[0])
-
       }
 
       if (e.target.value == "") {
