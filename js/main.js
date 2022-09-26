@@ -189,10 +189,10 @@ var timesClick = 0;
 barsButton.addEventListener("click",function(){
   if(timesClick == 0){
     timesClick = 1;
-    headerList.style.transform = "translateY(65%)";
+    headerList.style.transform = "translateY(200%)";
   }else{
     timesClick = 0;
-    headerList.style.transform = "translateY(-65%)";
+    headerList.style.transform = "translateY(-200%)";
   }
 })
 

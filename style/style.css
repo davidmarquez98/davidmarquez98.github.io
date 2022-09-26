@@ -556,7 +556,7 @@ header{
     font-size: 0.9em;
     font-weight: bolder;
     text-decoration: none;
-    
+    text-align: center;
 }
 
 .home-profile-cv-content a:hover{
@@ -889,10 +889,15 @@ footer p button:hover{
     .header-list-container{
         position: absolute;
         width: 100%;
+        height: 50%;
         font-size: 0.7em;
         transition: all .5s;
         transform: translateY(0%);
         z-index: -1;
+    }
+
+    .header-submenu{
+        right: 0;
     }
 
     .bars-button{
@@ -925,8 +930,6 @@ footer p button:hover{
         display: flex;
         justify-content: center;
         grid-area: profile;
-
-
     }
     .home-profile-content{
         left: 0;
