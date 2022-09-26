@@ -183,12 +183,20 @@ form.addEventListener("submit", function (e) {
 })
 
 const barsButton = document.getElementById("bars-button");
-
+const headerList = document.querySelector(".header-list-container");
+var timesClick = 0;
+  
 barsButton.addEventListener("click",function(){
-  const headerList = document.querySelector(".header-list-container");
-  headerList.style.visibility = "visible";
-  headerList.style.opacity = "1";
+  if(timesClick == 0){
+    timesClick = 1;
+    headerList.style.transform = "translateY(65%)";
+  }else{
+    timesClick = 0;
+    headerList.style.transform = "translateY(-65%)";
+  }
 })
+
+
 
 
 

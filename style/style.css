@@ -891,20 +891,22 @@ footer p button:hover{
         width: 100%;
         font-size: 0.7em;
         transition: all .5s;
-        transform: translateY(65%);
-        visibility: hidden;
-        opacity: 0;
+        transform: translateY(0%);
+        z-index: -1;
     }
 
     .bars-button{
         visibility: visible;
         opacity: 1;
+        z-index: 2;
     }
 
     .header-languages-container{
+        background-color: #0C0C0C;
         justify-content: end;
         padding-right: 1.5em;
         width: 100%;
+        z-index: 1;
     }
 
     .section-home{
