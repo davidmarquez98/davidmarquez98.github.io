@@ -322,7 +322,6 @@ header{
     font-weight: bolder;
 }
 
-
 .field{
     height: 30px;
 }
@@ -455,13 +454,15 @@ header{
 
 /*Contenedor de Info*/
 .home-info-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10em;
     grid-area: info;
-    height: 100%;
 }
 
 .home-info-content{
     width: 90%;
-    margin:150px auto;
 }
 
 .home-info-content h1{ /*Title*/
@@ -867,8 +868,10 @@ footer p button:hover{
 
 @media screen and (max-width: 850px){
     .section-home{
-        display:flex;
-        flex-direction: column-reverse;
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 25% auto;
+        grid-template-areas: "profile" "info";
     }
 
     .home-profile-profession{
@@ -877,11 +880,14 @@ footer p button:hover{
     }
 
     .home-profile-container{
-        height: 10em;
+        display: flex;
+        justify-content: center;
+        grid-area: profile;
+
+
     }
     .home-profile-content{
-        position: relative;
-        top: 3em;
+        left: 0;
     }
 
     .home-profile-content img{
@@ -894,6 +900,9 @@ footer p button:hover{
         font-size: 0.8em;
     }
     /**/
+    .home-info-container{
+        grid-area: info;
+    }
     .home-info-content h1{
         font-size: 1.5em;
     }
@@ -905,6 +914,7 @@ footer p button:hover{
     .home-info-text span{
         font-size: 1em;
     }
+
     /**/
     .education-title{
         font-size: 1.2em;
