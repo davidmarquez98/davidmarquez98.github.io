@@ -182,7 +182,13 @@ form.addEventListener("submit", function (e) {
   }
 })
 
+const barsButton = document.getElementById("bars-button");
 
+barsButton.addEventListener("click",function(){
+  const headerList = document.querySelector(".header-list-container");
+  headerList.style.visibility = "visible";
+  headerList.style.opacity = "1";
+})
 
 
 

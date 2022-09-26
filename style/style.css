@@ -110,6 +110,25 @@ header{
 }
 /*Titles*/
 
+.bars-button{
+    display: grid;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.bars-button button{
+    background-color: transparent;
+    border: none;
+}
+.bars-button button i{
+    color: white;
+    font-size: 2em;
+}
+
 .header-list-container{
     display: flex;
     height: 100%;
@@ -867,6 +886,27 @@ footer p button:hover{
 
 
 @media screen and (max-width: 850px){
+    .header-list-container{
+        position: absolute;
+        width: 100%;
+        font-size: 0.7em;
+        transition: all .5s;
+        transform: translateY(65%);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .bars-button{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .header-languages-container{
+        justify-content: end;
+        padding-right: 1.5em;
+        width: 100%;
+    }
+
     .section-home{
         display:grid;
         grid-template-columns: 100%;
