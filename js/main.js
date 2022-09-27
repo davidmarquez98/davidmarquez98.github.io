@@ -28,18 +28,6 @@ var swiper = new Swiper(".slider-content", {
   },
 });
 
-var screen = parseInt(screen.width.toString())
-if (screen < 850) {
-  swiper = new Swiper(".slider-content", {
-    slidesPerView: 2,
-    spaceBetween: 50,
-    slidesPerGroup: 2,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-}
 /* FADE REVEAL SECTION */
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
@@ -182,6 +170,7 @@ form.addEventListener("submit", function (e) {
   }
 })
 
+
 const barsButton = document.getElementById("bars-button");
 const headerList = document.querySelector(".header-list-container");
 var timesClick = 0;
@@ -195,6 +184,33 @@ barsButton.addEventListener("click",function(){
     headerList.style.transform = "translateY(-200%)";
   }
 })
+
+var screen = parseInt(screen.width.toString())
+if (screen < 850) {
+  const openSubmenu = document.getElementById("open-submenu");
+  var timesClickSubmenu = 0;
+
+  swiper = new Swiper(".slider-content", {
+    slidesPerView: 2,
+    spaceBetween: 50,
+    slidesPerGroup: 2,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  
+  openSubmenu.addEventListener("click",function(){
+    const submenu = document.querySelector(".header-submenu"); 
+    if(timesClickSubmenu == 0){
+      timesClickSubmenu = 1;
+      submenu.style.transform = "translateY(0%)";
+    }else{
+      timesClickSubmenu = 0;
+      submenu.style.transform = "translateY(-100%)";
+    }
+  })
+}
 
 
 
