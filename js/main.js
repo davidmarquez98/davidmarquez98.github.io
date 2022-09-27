@@ -192,7 +192,7 @@ if (screen < 850) {
 
   swiper = new Swiper(".slider-content", {
     slidesPerView: 2,
-    spaceBetween: 50,
+    spaceBetween: 30,
     slidesPerGroup: 2,
     navigation: {
       nextEl: ".swiper-button-next",
