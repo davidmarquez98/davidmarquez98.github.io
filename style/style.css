@@ -280,8 +280,8 @@ header{
 }
 
 .modal-container{
-    width: 600px;
-    height: 600px;
+    width: 45%;
+    height: 98%;
     background-color: black;
     border: 1px solid #F7DC6F;
     border-radius: 5px;
@@ -291,9 +291,8 @@ header{
     position: relative;
     display: flex;
     color: #F7DC6F;
-    font-size: 25px;
-    padding: 10px;
-    height: 100px;
+    font-size: 25px; 
+    height: 15%;
 }
 
 .modal-close{
@@ -310,22 +309,23 @@ header{
 }
 
 .modal-title{
-    margin-left:28px;
-    margin-top: 2px;
+    margin-left:30px;
+    margin-top: 15px;
 }
-
 
 .modal-content{
     position: relative;
-    height: 500px;
+    height: 85%;
+    width: 100%;
     font-size: 16px;
 }
 
 
 .modal-content form{
+    margin: auto;
     position: relative;
-    height: 400px;
-    margin: 0 40px;
+    height: 100%;
+    width: 90%;
 }
 
 .modal-message-error-container{
@@ -333,7 +333,7 @@ header{
     color: white;
 }
 
-.modal-input-content label{
+.modal-input-content{
     color: white;
     font-weight: bolder;
 }
@@ -348,7 +348,7 @@ header{
 }
 
 .field, .field-message{
-    width: 500px;
+    width: 95%;
     background-color: #0C0C0C;
     color: white;
     margin-top: 10px;
@@ -366,6 +366,7 @@ header{
 
 .modal-input{
     height: 120px;
+    margin-top: 20px;
 }
 
 .modal-input-content{
@@ -378,7 +379,7 @@ header{
     height: 20px;
     position: absolute;
     bottom: 5px;
-    right: 25px;
+    right: 30px;
     display: grid;
     place-items: center;
     border-radius: 50px;
@@ -394,7 +395,7 @@ header{
     height: 20px;
     position: absolute;
     bottom: 5px;
-    right: 25px;
+    right: 30px;
     display: grid;
     place-items: center;
     border-radius: 50px;
@@ -919,6 +920,33 @@ footer p button:hover{
         z-index: 1;
     }
 
+    /**/
+
+    .modal-container{
+        width: 90%;
+        height: 90%;
+    }
+
+    .modal-title{
+        font-size: 0.8em;
+    }
+
+    .modal-input-content label{
+        font-size: 0.8em;
+    }
+
+    .modal-input-error{
+        font-size: 0.6em;
+    }
+
+    .modal-message-error-container{
+        width: 22em;
+        font-size: 0.6em;
+        left: 2em;
+        bottom:4.5em;
+    }
+
+    /**/
     .section-home{
         display:grid;
         grid-template-columns: 100%;
@@ -1056,7 +1084,7 @@ footer p button:hover{
     }
     .project-card-message{
         font-size: 2em;
-        height: 6em;
+        height: 50%;
     }
 
     footer h3{
