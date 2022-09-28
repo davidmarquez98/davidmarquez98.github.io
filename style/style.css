@@ -104,7 +104,7 @@ header{
     color:#F7DC6F;
 }
 
-.header-networks-button{
+.header-socialmedias-button{
     color:#E74C3C; 
 }
 /*Titles*/
@@ -135,7 +135,7 @@ header{
     list-style: none;
 }
 
-.home, .education, .projects, .contactme, .networks{
+.home, .education, .projects, .contactme, .socialmedias-hover, .socialmedias{
     height: 100%;
     width: 20%;
     cursor: pointer;
@@ -156,7 +156,7 @@ header{
     width: 100%;
 }
 
-.header-contactme-button, .header-networks-button{
+.header-contactme-button, .header-socialmedias-button{
     background-color: transparent;
     font-weight: bolder;
     font-size: 1em;
@@ -185,9 +185,8 @@ header{
     color: #9A7D0A;
 }
 
-.networks:hover .header-title-container, .networks:hover .header-networks{
+.socialmedias:hover .header-title-container, .socialmedias-hover:hover .header-title-container{
     background-color: #F1948A;
-    color: #641E16;
 }
 
 .reveal{
@@ -222,17 +221,21 @@ header{
     width: 30px;
 }
 /*SUB MENU NETWORKS*/
-.networks{
+.socialmedias-hover{
     position: relative;
 }
 
 .header-submenu{
+    background-color: rgb(100, 30, 22,0.8);
+    color:#F5B7B1;
     transition: all .5s;
     transform: translateY(-100%);
     position: absolute;
     height: 100px;
     width: 150px;
     z-index: -1;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .header-submenu-container li {
@@ -255,9 +258,7 @@ header{
     color:white;
 }
 
-.networks:hover .header-submenu{
-    background-color: rgb(100, 30, 22);
-    color:#F5B7B1;
+.socialmedias-hover:hover .header-submenu{
     visibility: visible;
     opacity: 1;
     transform: translateY(0%);
@@ -580,19 +581,21 @@ header{
 }
 
 .card{
+    background-color: #202020;
     display: flex;
     justify-content: center;
-    background-color: #202020;
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .card-container{
+    transition: .5s;
     width: 15em;
     height: 15em;
     margin: 20px;
 }
+
 .card-image{
     position: relative;
     width: 100%;
@@ -606,6 +609,10 @@ header{
 }
 
 .card-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     font-size: 0.8em;
     position: absolute;
@@ -626,8 +633,12 @@ header{
 }
 
 .card-content{
-    margin: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 0.8em;
+    height: 25%;
 }
 
 .card:hover .card-text{
@@ -674,8 +685,8 @@ header{
     display: flex;
     list-style: none;
     color: white;
-    animation: marquee 10s linear infinite;
-    width: 90%;
+    animation: marquee 5s linear infinite;
+    width: 100%;
 }
 
 @keyframes marquee{
@@ -683,7 +694,7 @@ header{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-117%);
+        transform: translateX(-105%);
     }
 }
 .tools-list li{
@@ -853,7 +864,7 @@ footer{
     background-color:#131313;
 }
 
-footer h3, p{
+footer h3, footer p{
     color: white;
     margin: 20px;
     text-align: center;
@@ -921,6 +932,7 @@ footer p button:hover{
         z-index: 1;
     }
 
+   
     /**/
 
     .modal-container{
@@ -1009,6 +1021,7 @@ footer p button:hover{
     }
 
     .card-content{
+        height: 7em;
         font-size: 0.7em;
     }
 
@@ -1027,9 +1040,17 @@ footer p button:hover{
     .tools-list-content{
         width: 90%;
     }
-
+    
+    @keyframes marquee{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-363%);
+        }
+    }
     .tools-list ul{
-        animation: marquee 2s linear infinite;
+        animation: marquee 10s linear infinite;
     }
 
     .projects-title{

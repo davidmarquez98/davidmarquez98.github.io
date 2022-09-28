@@ -187,6 +187,8 @@ barsButton.addEventListener("click",function(){
 
 var screen = parseInt(screen.width.toString())
 if (screen < 850) {
+  const socialmediaClass = document.querySelector(".socialmedias-hover");
+  socialmediaClass.className = "socialmedias";
   const openSubmenu = document.getElementById("open-submenu");
   var timesClickSubmenu = 0;
 
@@ -204,10 +206,16 @@ if (screen < 850) {
     const submenu = document.querySelector(".header-submenu"); 
     if(timesClickSubmenu == 0){
       timesClickSubmenu = 1;
-      submenu.style.transform = "translateY(0%)";
+      submenu.style.transform = "translateY(-5%)";
+      submenu.style.opacity = "1";
+      submenu.style.visibility = "visible";
+      openSubmenu.style.backgroundColor = "#F5B7B1";
     }else{
       timesClickSubmenu = 0;
       submenu.style.transform = "translateY(-100%)";
+      submenu.style.opacity = "0";
+      submenu.style.visibility = "hidden";
+      openSubmenu.style.backgroundColor = "#0C0C0C";
     }
   })
 }
