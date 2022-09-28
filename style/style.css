@@ -984,7 +984,7 @@ footer p button:hover{
     }
     .card-image img{
         width: 100%;
-        height: 6em;
+        height: 7em;
     }
 
     .tools-title{
@@ -1001,6 +1001,7 @@ footer p button:hover{
 
     .projects-title{
         font-size: 1.2em;
+        height: 5em;
     }
 
     .project-cards{
@@ -1008,31 +1009,61 @@ footer p button:hover{
         align-items: center;
     }
     
-    .project-card{
-        height: 20em;
-        
+    .project-card-container{
+        margin-top: 3em;
+        width: 100%;
+        height: 100%;
     }
 
-    .project-card-container{
+    .project-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 22.5em;
         width: 20em;
-        margin-top: 50px;
     }
 
     .project-card-content{
+        height: 100%;
+        width: 95%;
     }
+
     .project-card-image{
-        width: 18em;
-        height: 10em;
+        width: 100%;
+        height: 50%;
+        
     }
     .project-card-image img{
         width: 100%;
     }
 
+    .project-card-info{
+        height: 30%;
+    }
     .project-card-info h3{
         font-size: 1.2em;
     }
 
     .project-card-info p{
         font-size: 0.8em;
+    }
+
+    .project-card-buttons{
+        height: 20%;
+        width: 100%;
+        padding-left: 0;
+
+    }
+    .project-card-message{
+        font-size: 2em;
+        height: 6em;
+    }
+
+    footer h3{
+        font-size: 0.8em;
+    }
+
+    footer p{
+        font-size: 0.7em;
     }
 }
