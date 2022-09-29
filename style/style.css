@@ -650,6 +650,12 @@ header{
     color: white;
 }
 /*Container TOOLS*/
+.tools-title{
+    padding-left: 20px;
+    font-size: 2em;
+    color:#3498DB;
+}
+
 .tools-container{
     height: 10em;
 }
@@ -685,7 +691,7 @@ header{
     display: flex;
     list-style: none;
     color: white;
-    animation: marquee 5s linear infinite;
+    animation: marquee 10s linear infinite;
     width: 100%;
 }
 
@@ -720,33 +726,6 @@ header{
     bottom:-5px;
 }
 
-.tool-name::after{
-    content: "";
-    display: block;
-    border-bottom: 8px solid #202020;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    position: absolute;
-    bottom: 20px;
-    left: calc(50% - 8px);
-    
-}
-
-.tools-container li:hover img{
-    width: 50px;
-    transition: 0.3s;
-}
-
-.tools-container li:hover .tool-name{ 
-    display: inline-block;
-}
-
-.tools-title{
-    padding-left: 20px;
-    font-size: 2em;
-    color:#3498DB;
-}
-
 /********************/
 /*Contenedor de PROJECTS*/
 /********************/
@@ -778,10 +757,6 @@ header{
     width: 670px;
 }
 
-.project-card-content{
-    height: 100%;
-}
-
 .project-card{
     display: flex;
     justify-content: center;
@@ -793,6 +768,12 @@ header{
     transition: all 400ms ease;
 }
 
+.project-card-content{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 90%;
+}
 .project-card:hover{
     box-shadow: 5px 5px 20px rgb(88, 214, 141,0.4);
     transform: translateY(-3%);
@@ -823,6 +804,7 @@ header{
 
 .project-card-info{
     height: 25%;
+    width: 100%;
 }
 
 .project-card-info h3{
@@ -830,32 +812,44 @@ header{
     place-items: center;
     color: #53966F;
     font-size: 1.2em;
-    font-weight: bold;
 }
 
 .project-card-info p{
     color:#BEBEBE;
+    margin-top: 1em;
 }
 
 .project-card-buttons{
     display: flex;
-    align-items: center;
-    width: auto;
-    height: auto;
-    padding-left: 1em;
+    width: 50%;
 }
 
-.project-card-buttons a{
-    margin-left: 1em;
-}
 .project-card-buttons i{
     font-size: 2em;
     color: #53966F;
+    text-decoration: none;
+    margin-right: 1em;
 }
 
 .project-card-buttons i:hover{
     font-size: 40px;
     transition: 0.3s;
+}
+
+.project-card-buttons a:visited{
+    color:#202020
+}
+
+.project-card-tools{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    width: 50%;
+}
+
+.project-card-tools img{
+    width: 2em;
+    height: 2em;
 }
 /********************/
 /*Contenedor de FOOTER*/
@@ -1092,7 +1086,7 @@ footer p button:hover{
     }
 
     .project-card-info{
-        height: 30%;
+        height: 35%;
     }
     .project-card-info h3{
         font-size: 1.2em;
@@ -1103,11 +1097,10 @@ footer p button:hover{
     }
 
     .project-card-buttons{
-        height: 20%;
-        width: 100%;
-        padding-left: 0;
-
+        display: flex;
+        width: 40%;
     }
+
     .project-card-message{
         font-size: 2em;
         height: 50%;
