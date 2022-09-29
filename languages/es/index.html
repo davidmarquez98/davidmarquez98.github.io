@@ -24,47 +24,52 @@
         </button>
       </div>
       <ul class="header-list-container">
-        <li class="home">
-          <div class="header-title-container">
+        <li class="home-container">
+          <div class="header-title-content">
             <a class="header-title" href="#home-id">
               <span class="header-home">Inicio</span>
             </a>
           </div>
         </li>
-        <li class="education">
-          <div class="header-title-container">
+        <li class="education-container">
+          <div class="header-title-content">
             <a class="header-title" href="#education-id">
               <span class="header-education">Educacion</span>
             </a>
           </div>
         </li>
-        <li class="projects">
-          <div class="header-title-container">
+        <li class="projects-container">
+          <div class="header-title-content">
             <a class="header-title" href="#projects-id">
               <span class="header-projects">Projectos</span>
             </a>
           </div>
         </li>
-        <li class="contactme">
-          <div class="header-title-container">
+        <li class="contactme-container">
+          <div class="header-title-content">
             <button class="header-contactme-button" id="open-modal" data-bs-toggle="modal"
               data-bs-target="#exampleModal">
               Contactame
             </button>
           </div>
         </li>
-        <li class="socialmedias-hover">
-          <div class="header-title-container">
+        <li class="socialmedias-container-hover">
+          <div class="header-title-content">
             <div class="header-title">
               <button class="header-socialmedias-button">Redes Sociales</button>
             </div>
           </div>
-          <div class="header-submenu">
-            <ul class="header-submenu-container">
-              <li><i class="fa-brands fa-linkedin"></i> &nbsp;&nbsp;<a target="_blank"
-                  href="https://www.linkedin.com/in/david-ariel-marquez/"> Linkedin</a></li>
-              <li><i class="fa-brands fa-square-github"></i>&nbsp;&nbsp;&nbsp;<a target="_blank"
-                  href="https://github.com/davidmarquez98"> Github</a></li>
+          <div class="socialmedias-submenu">
+            <ul class="socialmedias-submenu-container">
+              <li>
+                <i class="fa-brands fa-linkedin"></i> 
+                &nbsp;&nbsp;
+                <a target="_blank"href="https://www.linkedin.com/in/david-ariel-marquez/"> Linkedin</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-square-github"></i>
+                &nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/davidmarquez98"> Github</a></li>
             </ul>
           </div>
         </li>
@@ -82,17 +87,17 @@
       </div>
     </header>
 
-    <div class="modal" id="modal">
-      <div class="modal-container">
+    <div class="modal-container" id="modal">
+      <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title">Contactame</h3>
           <button id="close-modal" class="modal-close">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
-        <div class="modal-content">
+        <div class="modal-form">
           <form id="form">
-            <div class="modal-input">
+            <div class="modal-input-container">
               <div class="modal-input-content">
                 <label>Nombre*</label><br />
                 <input id="name" class="field" type="text" placeholder="Tu nombre..">
@@ -108,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div class="modal-input">
+            <div class="modal-input-container">
               <div class="modal-input-content">
                 <label>Direccion email*</label><br />
                 <input id="email" class="field" type="text" placeholder="Tu email..">
@@ -123,7 +128,7 @@
                 </div>
               </div>
             </div>
-            <div class="modal-textarea">
+            <div class="modal-textarea-container">
               <div class="modal-input-content">
                 <label>Mensaje*</label><br />
                 <textarea id="message" class="field field-message" type="text"
@@ -187,41 +192,41 @@
           <div class="card-wrapper swiper-wrapper">
 
             <div class="card swiper-slide">
-              <div class="card-container">
+              <div class="card-content">
                 <div class="card-image">
                   <img src="img/education/school.png">
-                  <div class="card-text">
+                  <div class="card-info">
                     <span>Economia y administracion</span>
                   </div>
                 </div>
-                <div class="card-content">
+                <div class="card-text">
                   <p>Escuela Cristiana Evangelica Argentina | 2010 - 2015</p>
                 </div>
               </div>
             </div>
 
             <div class="card swiper-slide">
-              <div class="card-container">
+              <div class="card-content">
                 <div class="card-image">
                   <img src="img/education/university.jpg" />
-                  <div class="card-text">
+                  <div class="card-info">
                     <span>Tecnicatura en Programacion</span>
                     <p>Basico uso de JavaScript, lenguaje C (Funciones,
                       arrays, punteros, archivos)
                     </p>
                   </div>
                 </div>
-                <div class="card-content">
+                <div class="card-text">
                   <p>UTN - FRA <br />Abril 2021 - 1er CUATRIMESTRE INCOMPLETO</p>
                 </div>
               </div>
             </div>
 
             <div class="card swiper-slide">
-              <div class="card-container">
+              <div class="card-content">
                 <div class="card-image">
                   <img src="img/education/java.png">
-                  <div class="card-text">
+                  <div class="card-info">
                     <span> Universidad Java por Global Mentoring Ing.Ubaldo Acosta</span>
                     <p>
                       Fundamentos, POO, Patrones de Diseño y buenas prácticas, JDBC,
@@ -230,17 +235,17 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-content">
+                <div class="card-text">
                   <p>Udemy | Enero 2022 - Agosto 2022</p>
                 </div>
               </div>
             </div>
 
             <div class="card swiper-slide">
-              <div class="card-container">
+              <div class="card-content">
                 <div class="card-image">
                   <img src="img/education/css.jpg" />
-                  <div class="card-text">
+                  <div class="card-info">
                     <span>Universidad CSS por Global Mentoring Ing.Ubaldo Acosta</span>
                     <p>
                       Introducción a CSS, selectores, manejo de colores, borders, margin, padding,
@@ -248,7 +253,7 @@
                       gradientes, box shadow, flexbox.
                     </p>
                   </div>
-                  <div class="card-content">
+                  <div class="card-text">
                     <p>Udemy | Agosto 2022 - Septiembre 2022</p>
                   </div>
                 </div>
@@ -256,11 +261,11 @@
             </div>
 
             <div class="card swiper-slide">
-              <div class="card-container">
+              <div class="card-content">
                 <div class="card-image">
                   <!--Ingles-->
                   <img src="img/education/english.png" />
-                  <div class="card-text">
+                  <div class="card-info">
                     <span> B2 First - Cambridge</span>
                     <p>
                       Comprencion lectora, preparacion de un essay, desarrollo en el vocabulario general, la
@@ -269,7 +274,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-content">
+                <div class="card-text">
                   <p>
                     Instituto Westminster School Of Languages <br /> Agosto 2021 - EN CURSO
                   </p>
@@ -285,7 +290,11 @@
 
       <div class="tools-container reveal">
         <!--Contenedor herramientas-->
-        <h2 class="tools-title">Tools</h2>
+        <div>
+          <div>
+            <h2 class="tools-title">Herramientas</h2>
+          </div>
+        </div>
         <div class="tools-list-container">
           <div class="tools-list-content">
             <div class="tools-list">
@@ -318,22 +327,23 @@
                 <li><img src="img/tools/tomcat-logo.png"></li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>
     </section>
 
     <section class="section-projects" id="projects-id">
-      <div class="projects-title reveal">
-        <h2>
-          Projectos
-        </h2>
+      <div class="projects-title-container reveal">
+        <div class="projects-title-content">
+          <h2 class="projects-title">
+            Projectos
+          </h2>
+        </div>
       </div>
-      <div class="project-cards reveal">
 
-        <div class="project-card-container">
-          <div class="project-card">
+      <div class="project-cards reveal">
+        <div class="project-card">
+          <div class="project-card-container">
             <div class="project-card-content">
               <div class="project-card-image">
                 <img src="img/projects/portfolio.png"></img>
@@ -363,8 +373,8 @@
           </div>
         </div>
 
-        <div class="project-card-container">
-          <div class="project-card">
+        <div class="project-card">
+          <div class="project-card-container">
             <div class="project-card-content">
               <div class="project-card-message">
                 <div class="comming-soon">PROXIMAMENTE</div>

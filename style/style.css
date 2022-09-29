@@ -18,7 +18,7 @@ html{
     grid-template-areas: "header" "home" "education" "projects" "footer";
 }
 
-/*Scroll*/
+/**** SCROLL ****/
     body::-webkit-scrollbar {
     width: 15px;               
   }
@@ -71,9 +71,8 @@ html{
     visibility: hidden;
     opacity: 0;
   }
-/********************/
-/*Container of HEADER*/
-/********************/
+
+/**** HEADER ****/
 header{
     display: flex;
     grid-area: header;
@@ -107,26 +106,6 @@ header{
 .header-socialmedias-button{
     color:#E74C3C; 
 }
-/*Titles*/
-
-.bars-button{
-    display: grid;
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    width: 15%;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.bars-button button{
-    background-color: transparent;
-    border: none;
-}
-.bars-button button i{
-    color: white;
-    font-size: 2em;
-}
 
 .header-list-container{
     display: flex;
@@ -135,10 +114,17 @@ header{
     list-style: none;
 }
 
-.home, .education, .projects, .contactme, .socialmedias-hover, .socialmedias{
+.home-container, .education-container, .projects-container, .contactme-container, .socialmedias-container-hover, .socialmedias-container{
     height: 100%;
     width: 20%;
     cursor: pointer;
+}
+
+.header-title-content{
+    background-color: #0C0C0C;
+    font-size: 0.9em;
+    height: 100%;
+    width: 100%;
 }
 
 .header-title{
@@ -147,13 +133,6 @@ header{
     height: 100%;
     width: 100%;
     text-decoration: none;
-}
-
-.header-title-container{
-    background-color: #0C0C0C;
-    font-size: 0.9em;
-    height: 100%;
-    width: 100%;
 }
 
 .header-contactme-button, .header-socialmedias-button{
@@ -166,26 +145,26 @@ header{
     width: 100%;
 }
 
-.home:hover .header-title-container{
+.home-container:hover .header-title-content{
     background-color:#C39BD3;
 }
 
-.education:hover .header-education, .education:hover .header-title-container{
+.education-container:hover .header-education, .education-container:hover .header-title-content{
     background-color:#7FB3D5; 
     color:#154360;
 }
 
-.projects:hover .header-projects, .projects:hover .header-title-container{
+.projects-container:hover .header-projects, .projects-container:hover .header-title-content{
     background-color: #A9DFBF;
     color:#0B5345; 
 }
 
-.contactme:hover button, .contactme:hover .header-contactme-button{
+.contactme-container:hover button, .contactme-container:hover .header-contactme-button{
     background-color: #F9E79F;
     color: #9A7D0A;
 }
 
-.socialmedias:hover .header-title-container, .socialmedias-hover:hover .header-title-container{
+.socialmedias-container-hover:hover .header-title-content{
     background-color: #F1948A;
 }
 
@@ -220,12 +199,34 @@ header{
 .header-languages-content a img{
     width: 30px;
 }
-/*SUB MENU NETWORKS*/
-.socialmedias-hover{
+
+/* RESPONSIVE BUTTON */
+.bars-button{
+    display: grid;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.bars-button button{
+    background-color: transparent;
+    border: none;
+}
+.bars-button button i{
+    color: white;
+    font-size: 2em;
+}
+/**/
+
+/* SUB MENU SOCIAL MEDIAS */
+.socialmedias-container-hover{
     position: relative;
 }
 
-.header-submenu{
+.socialmedias-submenu{
     background-color: rgb(100, 30, 22,0.8);
     color:#F5B7B1;
     transition: all .5s;
@@ -238,35 +239,36 @@ header{
     opacity: 0;
 }
 
-.header-submenu-container li {
+.socialmedias-submenu-container li {
     margin:15px 10px 0 20px;
     list-style: none;
 }
 
-.header-submenu-container li a{
+.socialmedias-submenu-container li a{
     text-decoration: none;
 }
 
-.header-submenu-container li i{
+.socialmedias-submenu-container li i{
     font-size: 25px;
 }
-.header-submenu-container a:hover{
+
+.socilamedias-submenu-container a:hover{
     text-decoration: underline;
 }
 
-.header-submenu-container li a:visited{
+.socialmedias-submenu-container li a:visited{
     color:white;
 }
 
-.socialmedias-hover:hover .header-submenu{
+.socialmedias-container-hover:hover .socialmedias-submenu{
     visibility: visible;
     opacity: 1;
     transform: translateY(0%);
 }
 
-/*MODAL*/
+/* MODAL WINDOW */
 
-.modal{
+.modal-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,7 +282,7 @@ header{
     transition: all 500ms ease;
 }
 
-.modal-container{
+.modal-content{
     width: 45%;
     height: 98%;
     background-color: black;
@@ -314,7 +316,7 @@ header{
     margin-top: 15px;
 }
 
-.modal-content{
+.modal-form{
     position: relative;
     height: 85%;
     width: 100%;
@@ -322,7 +324,7 @@ header{
 }
 
 
-.modal-content form{
+.modal-form form{
     margin: auto;
     position: relative;
     height: 100%;
@@ -365,7 +367,7 @@ header{
     color: #CACFD2;
 }
 
-.modal-input{
+.modal-input-container{
     height: 120px;
     margin-top: 20px;
 }
@@ -454,9 +456,8 @@ header{
     left: 3em;
     visibility: hidden;
 }
-/********************/
-/*Section of HOME*/
-/********************/
+
+/**** SECTION HOME ****/
 .section-home{
     grid-area:home;
     display:grid;
@@ -466,7 +467,7 @@ header{
     color: white;
 }
 
-/*Contenedor de Info*/
+/*CONTAINER INFO*/
 .home-info-container{
     display: flex;
     justify-content: center;
@@ -479,7 +480,7 @@ header{
     width: 90%;
 }
 
-.home-info-content h1{ /*Title*/
+.home-info-content h1{ 
     color:#884EA0;
     font-size: 3em;
     text-align: center;
@@ -557,10 +558,8 @@ header{
 .home-profile-cv-content a:hover{
     text-decoration: underline;
 }
-/**************************/
-/*Contenedor de EDUCATION*/
-/************************/
 
+/**** SECTION EDUCATION ***/
 .education-title{
     color: #3498DB;
     text-align: center;
@@ -585,7 +584,7 @@ header{
     cursor: pointer;
 }
 
-.card-container{
+.card-content{
     transition: .5s;
     width: 15em;
     height: 15em;
@@ -604,7 +603,7 @@ header{
     border-radius: 5px;
 }
 
-.card-text{
+.card-info{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -620,7 +619,7 @@ header{
     opacity: 0;
 }
 
-.card-text span{
+.card-info span{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -628,7 +627,7 @@ header{
     height: 40px;
 }
 
-.card-content{
+.card-text{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -637,7 +636,7 @@ header{
     height: 25%;
 }
 
-.card:hover .card-text{
+.card:hover .card-info{
     opacity: 1;
     transition: 0.8s;
 }
@@ -645,7 +644,8 @@ header{
 .swiper-button-next{
     color: white;
 }
-/*Container TOOLS*/
+
+/* TOOLS */
 .tools-title{
     padding-left: 20px;
     font-size: 2em;
@@ -722,14 +722,12 @@ header{
     bottom:-5px;
 }
 
-/********************/
-/*Contenedor de PROJECTS*/
-/********************/
+/**** SECTION PROJECTS ****/
 .section-projects{
     grid-area: projects;
 }
 
-.projects-title{
+.projects-title-container{
     display: flex;
     color:#58D68D;
     justify-content: center;
@@ -737,7 +735,7 @@ header{
     height: 150px;
 }
 
-.projects-title h2{
+.projects-title{
     margin-top: 30px;
 }
 
@@ -746,14 +744,14 @@ header{
     width: 100%;
 }
 
-.project-card-container{
+.project-card{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 670px;
 }
 
-.project-card{
+.project-card-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -770,7 +768,7 @@ header{
     height: 100%;
     width: 90%;
 }
-.project-card:hover{
+.project-card-container:hover{
     box-shadow: 5px 5px 20px rgb(88, 214, 141,0.4);
     transform: translateY(-3%);
 }
@@ -847,8 +845,8 @@ header{
     width: 2em;
     height: 2em;
 }
-/********************/
-/*Contenedor de FOOTER*/
+ 
+/**** FOOTER ****/
 footer{
     grid-area: footer;
     background-color:#131313;
@@ -882,7 +880,7 @@ footer p button:hover{
     padding-left: 10px;
 }
 
-
+/**** RESPONSIVE DESIGN ****/
 @media screen and (max-width: 850px){
     .container{
         background-color: #0C0C0C;
@@ -893,6 +891,7 @@ footer p button:hover{
         grid-template-areas: "header" "home" "education" "projects" "footer";
     }
 
+    /* HEADER*/
     .header-list-container{
         background-color: #0C0C0C;
         position: absolute;
@@ -922,9 +921,7 @@ footer p button:hover{
         z-index: 1;
     }
 
-   
-    /**/
-
+    /* MODAL WINDOW*/
     .modal-container{
         width: 90%;
         height: 90%;
@@ -949,7 +946,7 @@ footer p button:hover{
         bottom:4.5em;
     }
 
-    /**/
+    /*SECTION HOME*/
     .section-home{
         display:grid;
         grid-template-columns: 100%;
@@ -980,10 +977,11 @@ footer p button:hover{
         height: 5em;
         font-size: 0.8em;
     }
-    /**/
+
     .home-info-container{
         grid-area: info;
     }
+
     .home-info-content h1{
         font-size: 1.5em;
     }
@@ -996,7 +994,7 @@ footer p button:hover{
         font-size: 1em;
     }
 
-    /**/
+    /*SECTION EDUCATION*/
     .education-title{
         font-size: 1.2em;
     }
@@ -1043,6 +1041,7 @@ footer p button:hover{
         animation: marquee 10s linear infinite;
     }
 
+    /*SECTION PRROJECTS*/
     .projects-title{
         font-size: 1.2em;
         height: 5em;
@@ -1102,6 +1101,7 @@ footer p button:hover{
         height: 50%;
     }
 
+    /*FOOTER*/
     footer h3{
         font-size: 0.8em;
     }
