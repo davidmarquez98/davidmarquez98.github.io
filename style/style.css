@@ -164,7 +164,7 @@ header{
     color: #9A7D0A;
 }
 
-.socialmedias-container-hover:hover .header-title-content{
+.socialmedias-container-hover:hover .header-title-content, .socialmedias-container:hover .header-title-content{
     background-color: #F1948A;
 }
 
@@ -222,7 +222,7 @@ header{
 /**/
 
 /* SUB MENU SOCIAL MEDIAS */
-.socialmedias-container-hover{
+.socialmedias-container-hover, .socialmedias-container{
     position: relative;
 }
 
@@ -903,7 +903,7 @@ footer p button:hover{
         z-index: -1;
     }
 
-    .header-submenu{
+    .socialmedias-submenu{
         right: 0;
     }
 
@@ -922,7 +922,7 @@ footer p button:hover{
     }
 
     /* MODAL WINDOW*/
-    .modal-container{
+    .modal-content{
         width: 90%;
         height: 90%;
     }
@@ -1004,11 +1004,11 @@ footer p button:hover{
         margin-right: 20px;
     }
 
-    .card-container{
+    .card-content{
         height: 12em;
     }
 
-    .card-content{
+    .card-text{
         height: 7em;
         font-size: 0.7em;
     }
@@ -1052,13 +1052,13 @@ footer p button:hover{
         align-items: center;
     }
     
-    .project-card-container{
+    .project-card{
         margin-top: 3em;
         width: 100%;
         height: 100%;
     }
 
-    .project-card{
+    .project-card-container{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1096,6 +1096,15 @@ footer p button:hover{
         width: 40%;
     }
 
+    .project-card-tools{
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .project-card-tools img{
+        width: 1.5em;
+        height: 1.5em;
+    }
     .project-card-message{
         font-size: 2em;
         height: 50%;

@@ -187,8 +187,8 @@ barsButton.addEventListener("click",function(){
 
 var screen = parseInt(screen.width.toString())
 if (screen < 850) {
-  const socialmediaClass = document.querySelector(".socialmedias-hover");
-  socialmediaClass.className = "socialmedias";
+  const socialmediaClass = document.querySelector(".socialmedias-container-hover");
+  socialmediaClass.className = "socialmedias-container";
   const openSubmenu = document.getElementById("open-submenu");
   var timesClickSubmenu = 0;
 
@@ -203,7 +203,7 @@ if (screen < 850) {
   });
   
   openSubmenu.addEventListener("click",function(){
-    const submenu = document.querySelector(".header-submenu"); 
+    const submenu = document.querySelector(".socialmedias-submenu"); 
     if(timesClickSubmenu == 0){
       timesClickSubmenu = 1;
       submenu.style.transform = "translateY(-5%)";
